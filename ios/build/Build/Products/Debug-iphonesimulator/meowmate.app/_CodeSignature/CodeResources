@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		zo7zlXX0hQ1+D1xDs+U0rH7zRZc=
+		g6sHZyGSDlSWHJVZ4/cnwzUNIEM=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -51,7 +51,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tOjs4HMLYiWPFOazzZNmI09hotE=
+		4216DfI+4iI1G6a2+oduelb8KEg=
+		</data>
+		<key>Ionicons.ttf</key>
+		<data>
+		D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -63,7 +67,7 @@
 		</data>
 		<key>PlugIns/meowmateTests.xctest.dSYM/Contents/Resources/DWARF/meowmateTests</key>
 		<data>
-		kZx+sfoNEqcFtDDNgvv0QZgcFnI=
+		d6HeCRmJqeXq2U63si3TJ1BfhPo=
 		</data>
 		<key>PlugIns/meowmateTests.xctest/Info.plist</key>
 		<data>
@@ -75,7 +79,7 @@
 		</data>
 		<key>PlugIns/meowmateTests.xctest/meowmateTests</key>
 		<data>
-		NGy+a0r9U7MnNyhBhfVHADBqGCw=
+		bw+dZzPhu/LYQt9EqpPwXELa9nY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -84,11 +88,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zo7zlXX0hQ1+D1xDs+U0rH7zRZc=
+			g6sHZyGSDlSWHJVZ4/cnwzUNIEM=
 			</data>
 			<key>hash2</key>
 			<data>
-			0UwQ9p86JHJlEZ6Tj++vR2feSnsxE4MMFFPAOlWKZTk=
+			4ZrCAlosg83djOnvkODEcHwku+z5iiPo7M43m9+E0+s=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -192,6 +196,17 @@
 			2hnwNPgdaewT28DbTqe0Gpaccdc2akBF8IjnGtISc58=
 			</data>
 		</dict>
+		<key>Ionicons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			u0dnmwuuuEgbf1HGitM65aUmc2y1CxcXzGD/a2X5CKM=
+			</data>
+		</dict>
 		<key>PlugIns/meowmateTests.xctest.dSYM/Contents/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -207,11 +222,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kZx+sfoNEqcFtDDNgvv0QZgcFnI=
+			d6HeCRmJqeXq2U63si3TJ1BfhPo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zGi3aIvWbwD5CAMpsTh6M/BdqswzD8oK2pcTTdklRt8=
+			ynNUrdjp3Jp8p7D4hh9FUTpF0I4MC+DYy8BnzsF9TL0=
 			</data>
 		</dict>
 		<key>PlugIns/meowmateTests.xctest/Info.plist</key>
@@ -240,11 +255,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NGy+a0r9U7MnNyhBhfVHADBqGCw=
+			bw+dZzPhu/LYQt9EqpPwXELa9nY=
 			</data>
 			<key>hash2</key>
 			<data>
-			SoQ7lr2LsWjwTI4eHjjyhtNCYTiSodRipadJR1Gw0Bg=
+			gmIAlJw0N0q3ulZMIQEwF+IwyThAD307cB4HBQL39Vk=
 			</data>
 		</dict>
 	</dict>
