@@ -1,0 +1,133 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/168f1efd3db313bba1bf94f16c31d160/AndroidManifest.xml:10:1-18:12
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/4017fa2992541f3c5f99e48fdf2da415/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/37becbff59a812b6548223ac5d6964fb/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:1:1-4:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/9537dd4af0191f180b3484c0968994e5/AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/3bbb50ab10e76b3f8fa52c080462491a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/cc0db41d94543d1c5963a6081e5ef19c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/82257e42cb49a1433a2a791f87d42e46/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/4d30622832971c0fb1c6c40a8894f59b/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:2:5-27
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:5:22-75
+application
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:7:5-24:19
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:3:3-17
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:3:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/9537dd4af0191f180b3484c0968994e5/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/9537dd4af0191f180b3484c0968994e5/AndroidManifest.xml:2:3-17
+	android:label
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:9:7-39
+	android:icon
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:10:7-41
+	android:allowBackup
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:8:7-38
+activity#com.meowmate.MainActivity
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:13:7-22:18
+	android:label
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:17:9-51
+	android:configChanges
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:16:9-79
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:20:13-73
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:20:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:23:7-84
+	android:name
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:23:17-81
+uses-sdk
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/168f1efd3db313bba1bf94f16c31d160/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/168f1efd3db313bba1bf94f16c31d160/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/4017fa2992541f3c5f99e48fdf2da415/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/4017fa2992541f3c5f99e48fdf2da415/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/37becbff59a812b6548223ac5d6964fb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/37becbff59a812b6548223ac5d6964fb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/3bbb50ab10e76b3f8fa52c080462491a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/3bbb50ab10e76b3f8fa52c080462491a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/cc0db41d94543d1c5963a6081e5ef19c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/cc0db41d94543d1c5963a6081e5ef19c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/82257e42cb49a1433a2a791f87d42e46/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/82257e42cb49a1433a2a791f87d42e46/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/4d30622832971c0fb1c6c40a8894f59b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/4d30622832971c0fb1c6c40a8894f59b/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
