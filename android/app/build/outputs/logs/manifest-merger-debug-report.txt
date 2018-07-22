@@ -4,10 +4,15 @@ ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/andr
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-20:12
 MERGED from [:react-native-vector-icons] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:2:1-15:12
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:17:1-24:12
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/6c4b3608324c5d779abd194e54f0d78c/AndroidManifest.xml:2:1-14:12
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/5d0168f6bec9ed44b64a7b31c6a26b4f/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:17:1-31:12
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/168f1efd3db313bba1bf94f16c31d160/AndroidManifest.xml:10:1-18:12
 MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/4017fa2992541f3c5f99e48fdf2da415/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.3.0.aar/37becbff59a812b6548223ac5d6964fb/AndroidManifest.xml:2:1-9:12
@@ -17,6 +22,15 @@ MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/Owinges/.gradle/caches/tra
 MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/cc0db41d94543d1c5963a6081e5ef19c/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/82257e42cb49a1433a2a791f87d42e46/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/4d30622832971c0fb1c6c40a8894f59b/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/fa88c4deb292d58a1645de5983239c88/AndroidManifest.xml:17:1-26:12
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/c80bee1502499eadf87786d776fc977b/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:17:1-31:12
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12
@@ -46,16 +60,42 @@ MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/cach
 		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:5:22-75
 application
 ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:7:5-24:19
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-18:19
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-18:19
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:13:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:22:5-20
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/6c4b3608324c5d779abd194e54f0d78c/AndroidManifest.xml:12:5-20
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/6c4b3608324c5d779abd194e54f0d78c/AndroidManifest.xml:12:5-20
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/5d0168f6bec9ed44b64a7b31c6a26b4f/AndroidManifest.xml:11:5-20
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/5d0168f6bec9ed44b64a7b31c6a26b4f/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:29:5-20
 MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:3:3-17
 MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/b760348bc8783cb1c9eb3b679e75afc1/AndroidManifest.xml:3:3-17
 MERGED from [org.webkit:android-jsc:r174650] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/9537dd4af0191f180b3484c0968994e5/AndroidManifest.xml:2:3-17
 MERGED from [org.webkit:android-jsc:r174650] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/9537dd4af0191f180b3484c0968994e5/AndroidManifest.xml:2:3-17
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/c80bee1502499eadf87786d776fc977b/AndroidManifest.xml:12:5-20
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/c80bee1502499eadf87786d776fc977b/AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:9:7-39
 	android:icon
@@ -88,20 +128,34 @@ ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/andr
 		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:20:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:23:7-84
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:9-17:40
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:9-17:40
+	android:exported
+		ADDED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:17:13-37
 	android:name
 		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:23:17-81
 uses-sdk
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/ef3e4f5f1393d7da7507ee7ff0b971a1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/b3c7740ea8b9e0a38e9537e10614f94a/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/abdd961eefc8f8466505ae9444fc6ba9/AndroidManifest.xml:20:5-43
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/6c4b3608324c5d779abd194e54f0d78c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.balysv.materialmenu:material-menu-toolbar:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-toolbar-1.5.4.aar/6c4b3608324c5d779abd194e54f0d78c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/5d0168f6bec9ed44b64a7b31c6a26b4f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.aurelhubert:ahbottomnavigation:2.0.6] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/ahbottomnavigation-2.0.6.aar/5d0168f6bec9ed44b64a7b31c6a26b4f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:21:5-23:54
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/168f1efd3db313bba1bf94f16c31d160/AndroidManifest.xml:14:5-16:41
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/168f1efd3db313bba1bf94f16c31d160/AndroidManifest.xml:14:5-16:41
 MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/4017fa2992541f3c5f99e48fdf2da415/AndroidManifest.xml:5:5-7:41
@@ -118,8 +172,28 @@ MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/Owinges/.gradl
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/82257e42cb49a1433a2a791f87d42e46/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/4d30622832971c0fb1c6c40a8894f59b/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/4d30622832971c0fb1c6c40a8894f59b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/fa88c4deb292d58a1645de5983239c88/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/fa88c4deb292d58a1645de5983239c88/AndroidManifest.xml:20:5-43
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/c80bee1502499eadf87786d776fc977b/AndroidManifest.xml:8:5-10:41
+MERGED from [com.balysv.materialmenu:material-menu:1.5.4] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/material-menu-1.5.4.aar/c80bee1502499eadf87786d776fc977b/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:21:5-23:58
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
 		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
@@ -128,6 +202,40 @@ INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/a
 		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
 		ADDED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml
+activity#com.reactnativenavigation.controllers.NavigationActivity
+ADDED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:9-14:86
+	android:configChanges
+		ADDED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:13-83
+	android:name
+		ADDED from [:react-native-navigation] /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/node_modules/react-native-navigation/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:13-84
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/45dea44bdf14e4ac60743ae2cace8d03/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/transition-25.3.1.aar/7e522d6a9a1cb74d1bf8d5f5a01a4261/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/48e31f7cbd9f6c609845dce712e08c98/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/fa88c4deb292d58a1645de5983239c88/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.3.1.aar/fa88c4deb292d58a1645de5983239c88/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/0935b8eb72d29d4abc8a4d3c4e61de8e/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/c39cfe896ad072c6a5158897fd27bcc7/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/8f1fe93af4e661d4f01947c7241e6600/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/6371766790192e88ed28bc0a3f15371d/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/8d7fe5b80b3279f11867eab1128035b4/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e0b1aaf376c10300fbccbe04c56d706c/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/267cbfb1458485feccbb077394732409/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /Users/Owinges/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/5098859eb89d64f9589b064a747e6e60/AndroidManifest.xml:26:9-47
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 IMPLIED from /Users/Owinges/Documents/WebDevelopment/SeriousProjects/meowmate/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE

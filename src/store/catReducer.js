@@ -1,7 +1,49 @@
 import { ADD_PLACE, DELETE_PLACE } from './catActions';
 
 const initialState = {
-    places: []
+    name: '',
+    age: null,
+    weight: null,
+    feeding: [
+        // {
+        //     date: new Date(),
+        //     foodType: 'wet' || 'dry' || 'raw',
+        //     quantity: null
+        // }
+    ],
+    poop: [
+        // {
+        //     date: new Date(),
+        //     consistency: 'dry' || 'normal' || 'runny'
+        // }
+    ],
+    playtime: [
+        // {
+        //     date: new Date(),
+        //     duration: null
+        // }
+    ],
+    health: {
+        deworming: [
+            // {
+            //     name: '',
+            //     frequency: 'daily' || 'weekly' || 'monthly',
+            //     startDate: new Date()
+            // }
+        ],
+        medicine: [
+            // {
+            //     name: '',
+            //     frequency: 'daily' || 'weekly' || 'monthly',
+            //     startDate: new Date()
+            // }
+        ],
+        vetReminder: {
+            //     name: '',
+            //     frequency: 'daily' || 'weekly' || 'monthly',
+            //     startDate: new Date()
+        }
+    }
 };
 
 const reducer = (state = initialState, action) => {

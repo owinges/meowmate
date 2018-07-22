@@ -73,13 +73,17 @@
 		<data>
 		eyXwW35vJeZ6t/E/qkSsjdf4CKI=
 		</data>
+		<key>PlugIns/meowmateTests.xctest/Ionicons.ttf</key>
+		<data>
+		D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
+		</data>
 		<key>PlugIns/meowmateTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		otBtFsRbzRFbaHcxrAw3C2NWtJ4=
+		q3mo1T5A8OTXeXgn1Uf7WxZj1V8=
 		</data>
 		<key>PlugIns/meowmateTests.xctest/meowmateTests</key>
 		<data>
-		bw+dZzPhu/LYQt9EqpPwXELa9nY=
+		8hT7Nxq+wZvkph0vKHGscR5lTgg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -240,26 +244,37 @@
 			uuVWH5gKF2SC/kGzmDrx36bgGon8jGjQhIwDPlI+Pjc=
 			</data>
 		</dict>
+		<key>PlugIns/meowmateTests.xctest/Ionicons.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			u0dnmwuuuEgbf1HGitM65aUmc2y1CxcXzGD/a2X5CKM=
+			</data>
+		</dict>
 		<key>PlugIns/meowmateTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			otBtFsRbzRFbaHcxrAw3C2NWtJ4=
+			q3mo1T5A8OTXeXgn1Uf7WxZj1V8=
 			</data>
 			<key>hash2</key>
 			<data>
-			7pIT2T5tn1WvgzNgMqnYut/CiaFMXXNoulYWPUQlK2M=
+			xEut8kCSxGrNfvMlWzJG6o6Qr8BIPVr9Yvqn/3va3P8=
 			</data>
 		</dict>
 		<key>PlugIns/meowmateTests.xctest/meowmateTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bw+dZzPhu/LYQt9EqpPwXELa9nY=
+			8hT7Nxq+wZvkph0vKHGscR5lTgg=
 			</data>
 			<key>hash2</key>
 			<data>
-			gmIAlJw0N0q3ulZMIQEwF+IwyThAD307cB4HBQL39Vk=
+			H90Fp6VWSnPuadlZ40+aRGLfL+sas0qgq56ARv8wQ3I=
 			</data>
 		</dict>
 	</dict>
