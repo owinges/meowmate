@@ -1,17 +1,26 @@
 // Create constants for action types
-const ADD_PLACE = 'ADD_PLACE';
-const DELETE_PLACE = 'DELETE_PLACE';
+const CHANGE_NAME = 'CHANGE_NAME';
+const CHANGE_AGE = 'CHANGE_AGE';
+const CHANGE_WEIGHT = 'CHANGE_WEIGHT';
 
-export const addPlace = (placeName) => {
+// Export actions
+export const changeName = (name) => {
     return {
-        type: ADD_PLACE,
-        placeName
+        type: CHANGE_NAME,
+        payload: name
     };
 }
 
-export const deletePlace = (key) => {
+export const changeAge = (age) => {
     return {
-        type: DELETE_PLACE,
-        key
+        type: CHANGE_AGE,
+        payload: age
+    };
+}
+
+export const changeWeight = (weight) => {
+    return {
+        type: CHANGE_WEIGHT,
+        payload: weight
     };
 }

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		g6sHZyGSDlSWHJVZ4/cnwzUNIEM=
+		dS9QdAPAX5UDn8SbVvZuvXNkYd0=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -83,7 +83,7 @@
 		</data>
 		<key>PlugIns/meowmateTests.xctest/meowmateTests</key>
 		<data>
-		8hT7Nxq+wZvkph0vKHGscR5lTgg=
+		5ORuGK7sciicgZQAbAP7ec3ImGQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -92,11 +92,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g6sHZyGSDlSWHJVZ4/cnwzUNIEM=
+			dS9QdAPAX5UDn8SbVvZuvXNkYd0=
 			</data>
 			<key>hash2</key>
 			<data>
-			4ZrCAlosg83djOnvkODEcHwku+z5iiPo7M43m9+E0+s=
+			rPPiVoLIvBxKAPZNYCe+3Dqb6Fj0yBBMQZ7OyUIJ5Zw=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -270,11 +270,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8hT7Nxq+wZvkph0vKHGscR5lTgg=
+			5ORuGK7sciicgZQAbAP7ec3ImGQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			H90Fp6VWSnPuadlZ40+aRGLfL+sas0qgq56ARv8wQ3I=
+			fgsmb7wjqLWDDfX+XrflgJ5GJEwKsVUOLPRZYTyenXE=
 			</data>
 		</dict>
 	</dict>

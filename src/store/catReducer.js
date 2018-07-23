@@ -1,9 +1,13 @@
-import { ADD_PLACE, DELETE_PLACE } from './catActions';
+import {
+    CHANGE_AGE,
+    CHANGE_NAME,
+    CHANGE_WEIGHT
+} from './catActions';
 
 const initialState = {
-    name: '',
-    age: null,
-    weight: null,
+    name: 'Miqo',
+    age: '7 months',
+    weight: '5 kilos',
     feeding: [
         // {
         //     date: new Date(),
@@ -48,26 +52,20 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_PLACE:
-            if (action.placeName.trim() === '') {
-                return state;
-            }
+        case CHANGE_NAME:
             return {
                 ...state,
-                places: state.places.concat({
-                    key: Math.random().toString(),
-                    name: action.placeName,
-                    image: {
-                        uri: 'https://media.apnarm.net.au/media/images/2017/08/14/b88918691z1_20170814095407_000g2fo5dlj2-0-5iuguypgxh2ktwxwqo2_ct677x380.jpg'
-                    }
-                })
+                name: action.payload
             };
-        case DELETE_PLACE:
+        case CHANGE_AGE:
             return {
                 ...state,
-                places: state.places.filter(place => {
-                    return place.key !== action.key;
-                })
+                age: action.payload
+            };
+        case CHANGE_WEIGHT:
+            return {
+                ...state,
+                weight: action.payload
             };
         default:
             return state;
