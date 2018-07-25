@@ -8,46 +8,8 @@ const initialState = {
     name: 'Miqo',
     age: '7 months',
     weight: '5 kilos',
-    feeding: [
-        // {
-        //     date: new Date(),
-        //     foodType: 'wet' || 'dry' || 'raw',
-        //     quantity: null
-        // }
-    ],
-    poop: [
-        // {
-        //     date: new Date(),
-        //     consistency: 'dry' || 'normal' || 'runny'
-        // }
-    ],
-    playtime: [
-        // {
-        //     date: new Date(),
-        //     duration: null
-        // }
-    ],
-    health: {
-        deworming: [
-            // {
-            //     name: '',
-            //     frequency: 'daily' || 'weekly' || 'monthly',
-            //     startDate: new Date()
-            // }
-        ],
-        medicine: [
-            // {
-            //     name: '',
-            //     frequency: 'daily' || 'weekly' || 'monthly',
-            //     startDate: new Date()
-            // }
-        ],
-        vetReminder: {
-            //     name: '',
-            //     frequency: 'daily' || 'weekly' || 'monthly',
-            //     startDate: new Date()
-        }
-    }
+    foodTarget: 50,
+    playTarget: 50
 };
 
 const reducer = (state = initialState, action) => {

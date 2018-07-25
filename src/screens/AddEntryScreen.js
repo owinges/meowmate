@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import {
-    Button,
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Navigation } from 'react-native-navigation';
+
+import EntryList from '../components/entry/EntryList';
+import Button from '../components/Button';
 
 export default class AddEntryScreen extends Component {
     closeModal = () => {
@@ -14,15 +12,28 @@ export default class AddEntryScreen extends Component {
         });
     }
 
+    showForm = (entryType) => {
+        this.props.navigator.push({
+            screen: 'meowmate.EntryFormScreen',
+            title: entryType,
+            passProps: {
+                type: entryType
+            }
+        })
+    }
+
     render() {
         return (
             <View style={styles.modal}>
-                <Text>Add a new entry!</Text>
-                <Button title='Close' onPress={this.closeModal} />
+                <EntryList showForm={this.showForm} />
+                <View style={styles.buttonContainer}>
+                    <Button style='default' onPress={this.closeModal}>Close</Button>
+                </View>
             </View>
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     modal: {
@@ -30,6 +41,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'papayawhip',
         flex: 1,
         justifyContent: 'flex-start',
-        marginTop: 30
+        paddingTop: 30
+    },
+    buttonContainer: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        marginBottom: 12
     }
 });

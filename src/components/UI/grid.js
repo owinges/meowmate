@@ -16,6 +16,6 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     column: {
-        flex: 1
+        // flex: 1,
     }
 });

@@ -1,7 +1,7 @@
 // Create constants for action types
-const CHANGE_NAME = 'CHANGE_NAME';
-const CHANGE_AGE = 'CHANGE_AGE';
-const CHANGE_WEIGHT = 'CHANGE_WEIGHT';
+export const CHANGE_NAME = 'CHANGE_NAME';
+export const CHANGE_AGE = 'CHANGE_AGE';
+export const CHANGE_WEIGHT = 'CHANGE_WEIGHT';
 
 // Export actions
 export const changeName = (name) => {

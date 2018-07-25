@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import {
-    Button,
     Image,
+    Platform,
     StyleSheet,
+    Text,
     View
 } from 'react-native';
 import { Navigation } from 'react-native-navigation';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 
 import { Row } from '../components/UI/grid';
 import { Header, Subheading } from '../components/UI/typography';
+import Button from '../components/Button';
 import ProgressBar from '../components/ProgressBar';
 
 class ProfileScreen extends Component {
@@ -21,8 +24,15 @@ class ProfileScreen extends Component {
         });
     }
 
+    displayEntryLog = () => {
+        this.props.navigator.push({
+            screen: 'meowmate.EntryLogScreen',
+            title: 'Entry Log'
+        })
+    }
+
     render() {
-        const { age, name, weight } = this.props;
+        const { age, foodTarget, name, playTarget, weight } = this.props;
 
         return (
             <View style={styles.container}>
@@ -30,16 +40,26 @@ class ProfileScreen extends Component {
                     <Image style={styles.image} source={{ uri: 'https://sopurrfect.com/wp-content/uploads/2016/06/SoPurrfect-What-You-Need-To-Know-About-Owning-A-Ragdoll-Cat-.jpg' }} />
                 </View>
                 <View style={styles.headingContainer}>
-                    <Header>{name}</Header>
+                    <Header style={styles.header}>{name}</Header>
                     <Row>
-                        <Subheading>{age}</Subheading>
-                        <Subheading>{weight}</Subheading>
+                        <Subheading style={styles.subheading}>{age}</Subheading>
+                        <Subheading style={styles.subheading}>{weight}</Subheading>
                     </Row>
-                    <ProgressBar title='Food target' progress={50} color='red' />
-                    <ProgressBar title='Play target' progress={50} color='blue' />
-                    <Row>
-                        <Button title='Press me!' onPress={this.displayModal} />
-                    </Row>
+                    <ProgressBar title='Food target' progress={foodTarget} color='red' />
+                    <ProgressBar title='Play target' progress={playTarget} color='blue' />
+                </View>
+                <View style={styles.modalOpener}>
+                    <Button style='FAB' onPress={this.displayModal}>
+                        <Icon
+                            name={Platform.OS === 'android' ? 'md-add' : 'ios-add'}
+                            size={60}
+                        />
+                    </Button>
+                </View>
+                <View style={styles.entryLogOpener}>
+                    <Button style='default' onPress={this.displayEntryLog}>
+                        <Text>Entry Log</Text>
+                    </Button>
                 </View>
             </View>
         );
@@ -59,7 +79,7 @@ const styles = StyleSheet.create({
         borderWidth: 4,
         height: 250,
         marginBottom: 30,
-        marginTop: 30,
+        marginTop: 20,
         overflow: 'hidden',
         width: 250
     },
@@ -72,22 +92,38 @@ const styles = StyleSheet.create({
         backgroundColor: 'moccasin',
         flex: 1,
         width: '100%'
+    },
+    header: {
+        marginTop: 8
+    },
+    subheading: {
+        marginTop: 8
+    },
+    modalOpener: {
+        bottom: 20,
+        left: 20,
+        position: 'absolute',
+    },
+    entryLogOpener: {
+        bottom: 25,
+        right: 20,
+        position: 'absolute',
     }
 });
 
 const mapStateToProps = state => {
     return {
         age: state.cat.age,
+        foodTarget: state.cat.foodTarget,
         name: state.cat.name,
+        playTarget: state.cat.playTarget,
         weight: state.cat.weight
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onChangeAge: (age) => dispatch(changeAge(age)),
-        onChangeName: (name) => dispatch(changeName(name)),
-        onChangeWeight: (weight) => dispatch(changeWeight(weight))
+        onAddEntry: (entry) => dispatch(addEntry(entry))
     }
 }
 
