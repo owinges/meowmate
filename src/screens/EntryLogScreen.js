@@ -4,17 +4,42 @@ import { connect } from 'react-redux';
 
 class EntryLogScreen extends Component {
     render() {
-        const { feeding } = this.props;
+        // Sort entries by month in descending order
+        const entries = this.props.entries.sort((a, b) => a.date < b.date);
+
+        // Function for sorting entries by time in descending order
+        const sorted = array => array.sort((a, b) => a.time < b.time);
 
         return (
             <View style={styles.container}>
                 <FlatList
-                    data={feeding}
+                    style={styles.list}
+                    data={entries}
+                    keyExtractor={item => item.date.format()}
                     renderItem={({ item }) => (
-                        <View style={styles.test}>
-                            <Text>{item.date.toDateString()}</Text>
-                            <Text>{item.foodType}</Text>
-                            <Text>{item.quantity}</Text>
+                        <View style={styles.entry}>
+                            <View style={styles.date}>
+                                <Text style={styles.dateText}>
+                                    {item.date.format('DD/MM/YYYY - dddd')}
+                                </Text>
+                            </View>
+                            <FlatList
+                                keyExtractor={item => item.time.format()}
+                                data={sorted(item.data)}
+                                renderItem={({ item }) => (
+                                    <View style={styles.nestedItem}>
+                                        <Text>{item.time.format('hh:mm A')}</Text>
+                                        <View style={styles.item}>
+                                            <Text style={styles.itemText}>Food Type:</Text>
+                                            <Text style={styles.itemText}>{item.foodType}</Text>
+                                        </View>
+                                        <View style={styles.item}>
+                                            <Text style={styles.itemText}>Quantity:</Text>
+                                            <Text style={styles.itemText}>{item.quantity} g</Text>
+                                        </View>
+                                    </View>
+                                )}
+                            />
                         </View>
                     )}
                 />
@@ -28,13 +53,40 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'papayawhip',
         flex: 1,
-        paddingTop: 12
+        paddingTop: 12,
+        width: '100%'
+    },
+    list: {
+        width: '80%'
+    },
+    entry: {
+        marginTop: 12,
+        width: '100%'
+    },
+    item: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    itemText: {
+        fontSize: 16
+    },
+    date: {
+        borderBottomWidth: 2,
+        borderBottomColor: 'black',
+        marginBottom: 8
+    },
+    dateText: {
+        fontSize: 24
+    },
+    nestedItem: {
+        marginTop: 4,
+        marginBottom: 4
     }
 })
 
 const mapStateToProps = state => {
     return {
-        feeding: state.entry.feeding
+        entries: state.feeding.entries
     }
 }
 

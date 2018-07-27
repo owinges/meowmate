@@ -1,11 +1,11 @@
 import { createStore, combineReducers, compose } from 'redux';
 
 import catReducer from './catReducer';
-import entryReducer from './entryReducer';
+import feedingReducer from './feedingReducer';
 
 const rootReducer = combineReducers({
     cat: catReducer,
-    entry: entryReducer
+    feeding: feedingReducer
 });
 
 let composeEnhancers = compose;

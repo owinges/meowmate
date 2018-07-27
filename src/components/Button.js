@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
         paddingTop: 6
     },
     defaultText: {
-        fontSize: 24
+        fontSize: 24,
+        textAlign: 'center'
     },
     FAB: {
         alignItems: 'center',

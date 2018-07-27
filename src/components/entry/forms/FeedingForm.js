@@ -1,49 +1,94 @@
 import React, { Component } from 'react';
-import { Button, Picker, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import DateTimePicker from 'react-native-modal-datetime-picker';
 import { connect } from 'react-redux';
+import moment from 'moment';
 
-import { addEntry } from '../../../store/entryActions';
+import Button from '../../Button';
+import Selector from './Selector';
+import { Header } from '../../UI/typography';
+import { addFeeding } from '../../../store/entryActions';
 
 class FeedingForm extends Component {
     state = {
-        foodType: 'Wet food',
-        quantity: '10 grams',
+        foodType: 'Dry food',
+        quantity: null,
         consistency: 'normal', // for poop: runny, normal, dry
         duration: '15 minutes', // for playtime
         name: 'Advocate', // name of deworming, medicine or vet visit
         frequency: 'monthly', // frequency: daily, weekly, monthly
-        startDate: '' // start date used to calculate frequency reminders
+        startDate: '', // start date used to calculate frequency reminders
+        isDateTimePickerVisible: false,
+        date: new Date()
     }
 
+    toggleDateTimePicker = () => this.setState({
+        isDateTimePickerVisible: !this.state.isDateTimePickerVisible
+    });
+
+    handleDatePicked = (date) => {
+        this.setState({ date });
+        this.toggleDateTimePicker();
+    };
+
     newEntry = () => {
-        const entry = {
-            key: Math.random().toString(),
-            date: new Date(),
+        if (this.state.quantity === null) {
+            return;
+        }
+
+        const feedingEntry = {
+            date: moment(this.state.date),
             foodType: this.state.foodType,
             quantity: this.state.quantity
         }
-        this.props.onAddEntry(entry);
+
+        this.props.onAddFeeding(feedingEntry);
+        this.props.returnToProfile();
+    }
+
+    handleSelector = foodType => {
+        this.setState({ foodType });
     }
 
     render() {
         return (
             <View style={styles.container}>
+            <TouchableOpacity onPress={this.toggleDateTimePicker}>
+                <Text>{this.state.date.toDateString()}</Text>
+            </TouchableOpacity>
+            <DateTimePicker
+                mode='datetime'
+                maximumDate={new Date()}
+                isVisible={this.state.isDateTimePickerVisible}
+                onConfirm={this.handleDatePicked}
+                onCancel={this.toggleDateTimePicker}
+            />
+            <Header style={styles.quantity}>How much food?</Header>
                 <TextInput
+                    style={styles.input}
                     value={this.state.quantity}
                     placeholder='Enter quantity in grams'
+                    keyboardType='number-pad'
+                    maxLength={3}
                     onChangeText={(value) => this.setState({ quantity: value })}
                 />
-                <Picker
-                    style={styles.picker}
-                    mode='dropdown'
-                    selectedValue={this.state.foodType}
-                    onValueChange={(itemValue) => this.setState({ foodType: itemValue })}
-                >
-                    <Picker.Item label={'Wet food'} value={'Wet food'} />
-                    <Picker.Item label={'Dry food'} value={'Dry food'} />
-                    <Picker.Item label={'Raw food'} value={'Raw food'} />
-                </Picker>
-                <Button title='submit' onPress={this.newEntry} />
+                <Header style={styles.type}>Type of food?</Header>
+                <Selector
+                    handleSelector={this.handleSelector}
+                    value='Wet food'
+                    activeValue={this.state.foodType}
+                />
+                <Selector
+                    handleSelector={this.handleSelector}
+                    value='Dry food'
+                    activeValue={this.state.foodType}
+                />
+                <Selector
+                    handleSelector={this.handleSelector}
+                    value='Raw food'
+                    activeValue={this.state.foodType}
+                />
+                <Button type='Default' onPress={this.newEntry}>Submit</Button>
             </View>
         );
     }
@@ -51,20 +96,44 @@ class FeedingForm extends Component {
 
 const styles = StyleSheet.create({
     container: {
+        alignItems: 'center',
         flex: 1,
         width: '80%'
+    },
+    quantity: {
+        marginBottom: 22,
+        marginTop: 16
+    },
+    type: {
+        marginTop: 16
     },
     picker: {
         width: '100%'
     },
     input: {
+        backgroundColor: 'white',
+        borderColor: '#eee',
+        borderRadius: 10,
+        borderWidth: 2,
+        fontSize: 24,
+        paddingBottom: 6,
+        paddingLeft: 12,
+        paddingRight: 12,
+        paddingTop: 6,
         width: '100%'
+    },
+    base: {},
+    active: {
+        backgroundColor: 'blue'
+    },
+    inactive: {
+        backgroundColor: 'gray'
     }
 });
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAddEntry: (entry) => dispatch(addEntry(entry))
+        onAddFeeding: (feeding) => dispatch(addFeeding(feeding))
     }
 }
 

@@ -15,21 +15,33 @@ export default class EntryFormScreen extends Component {
 
         switch (type) {
             case 'Feeding':
-                return <FeedingForm />;
+                return <FeedingForm returnToProfile={this.backToProfile} />;
             case 'Pooping':
-                return <PoopingForm />;
+                return <PoopingForm returnToProfile={this.backToProfile} />;
             case 'Playing':
-                return <PlayingForm />;
+                return <PlayingForm returnToProfile={this.backToProfile} />;
             case 'Deworming':
-                return <DewormingForm />;
+                return <DewormingForm returnToProfile={this.backToProfile} />;
             case 'Medicine':
-                return <MedicineForm />;
+                return <MedicineForm returnToProfile={this.backToProfile} />;
             case 'Vet visit':
-                return <VetVisitForm />;
+                return <VetVisitForm returnToProfile={this.backToProfile} />;
             default:
                 return;
         }
     }
+
+    backToProfile = () => {
+        // this.props.navigator.popToRoot({
+        //     animated: true,
+        //     animationType: 'fade'
+        // });
+
+        this.props.navigator.dismissAllModals({
+            animationType: 'slide-down'
+        });
+    }
+
     render() {
         return (
             <View style={styles.container}>
