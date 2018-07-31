@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navigation } from 'react-native-navigation';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
+import moment from 'moment';
 
 class PoopingLogScreen extends Component {
     static navigatorButtons = {
@@ -42,20 +43,20 @@ class PoopingLogScreen extends Component {
                 <FlatList
                     style={styles.list}
                     data={entries}
-                    keyExtractor={item => item.date.format()}
+                    keyExtractor={item => item.date}
                     renderItem={({ item }) => (
                         <View style={styles.entry}>
                             <View style={styles.date}>
                                 <Text style={styles.dateText}>
-                                    {item.date.format('DD/MM/YYYY - dddd')}
+                                    {moment(item.date).format('DD/MM/YYYY - dddd')}
                                 </Text>
                             </View>
                             <FlatList
-                                keyExtractor={item => item.time.format()}
+                                keyExtractor={item => item.time}
                                 data={sorted(item.data)}
                                 renderItem={({ item }) => (
                                     <View style={styles.nestedItem}>
-                                        <Text>{item.time.format('hh:mm A')}</Text>
+                                        <Text>{moment(item.time).format('hh:mm A')}</Text>
                                         <View style={styles.item}>
                                             <Text style={styles.itemText}>Consistency:</Text>
                                             <Text style={styles.itemText}>{item.consistency}</Text>
