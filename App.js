@@ -3,7 +3,9 @@ import { Provider } from 'react-redux';
 
 import AddEntryScreen from './src/screens/AddEntryScreen';
 import EntryFormScreen from './src/screens/EntryFormScreen';
-import EntryLogScreen from './src/screens/EntryLogScreen';
+import FeedingLogScreen from './src/screens/FeedingLogScreen';
+import PlaytimeLogScreen from './src/screens/PlaytimeLogScreen';
+import PoopingLogScreen from './src/screens/PoopingLogScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 
 // TESTING SCREEN
@@ -17,7 +19,9 @@ const store = configureStore();
 Navigation.registerComponent('meowmate.ProfileScreen', () => ProfileScreen, store, Provider);
 Navigation.registerComponent('meowmate.AddEntryScreen', () => AddEntryScreen, store, Provider);
 Navigation.registerComponent('meowmate.EntryFormScreen', () => EntryFormScreen, store, Provider);
-Navigation.registerComponent('meowmate.EntryLogScreen', () => EntryLogScreen, store, Provider);
+Navigation.registerComponent('meowmate.FeedingLogScreen', () => FeedingLogScreen, store, Provider);
+Navigation.registerComponent('meowmate.PlaytimeLogScreen', () => PlaytimeLogScreen, store, Provider);
+Navigation.registerComponent('meowmate.PoopingLogScreen', () => PoopingLogScreen, store, Provider);
 Navigation.registerComponent('meowmate.TestingScreen', () => TestingScreen, store, Provider);
 
 // Start app

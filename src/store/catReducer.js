@@ -8,7 +8,6 @@ const initialState = {
     name: 'Miqo',
     age: '7 months',
     weight: '5 kilos',
-    foodTarget: 50,
     playTarget: 50
 };
 

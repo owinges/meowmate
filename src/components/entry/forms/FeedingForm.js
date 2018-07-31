@@ -13,8 +13,6 @@ class FeedingForm extends Component {
     state = {
         foodType: 'Dry food',
         quantity: null,
-        consistency: 'normal', // for poop: runny, normal, dry
-        duration: '15 minutes', // for playtime
         name: 'Advocate', // name of deworming, medicine or vet visit
         frequency: 'monthly', // frequency: daily, weekly, monthly
         startDate: '', // start date used to calculate frequency reminders
@@ -107,9 +105,6 @@ const styles = StyleSheet.create({
     type: {
         marginTop: 16
     },
-    picker: {
-        width: '100%'
-    },
     input: {
         backgroundColor: 'white',
         borderColor: '#eee',
@@ -121,13 +116,6 @@ const styles = StyleSheet.create({
         paddingRight: 12,
         paddingTop: 6,
         width: '100%'
-    },
-    base: {},
-    active: {
-        backgroundColor: 'blue'
-    },
-    inactive: {
-        backgroundColor: 'gray'
     }
 });
 

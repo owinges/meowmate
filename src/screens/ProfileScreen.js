@@ -15,6 +15,9 @@ import { Header, Subheading } from '../components/UI/typography';
 import Button from '../components/Button';
 import ProgressBar from '../components/ProgressBar';
 
+import { checkFeedingTarget } from '../store/entryActions';
+import logTabs from './logTabs';
+
 class ProfileScreen extends Component {
     displayModal = () => {
         Navigation.showModal({
@@ -25,14 +28,15 @@ class ProfileScreen extends Component {
     }
 
     displayEntryLog = () => {
-        this.props.navigator.push({
-            screen: 'meowmate.EntryLogScreen',
-            title: 'Entry Log'
-        })
+        logTabs();
+    }
+
+    componentWillMount() {
+        this.props.onCheckFeedingTarget();
     }
 
     render() {
-        const { age, foodTarget, name, playTarget, weight } = this.props;
+        const { age, feedingTarget, name, playtimeTarget, weight } = this.props;
 
         return (
             <View style={styles.container}>
@@ -45,8 +49,8 @@ class ProfileScreen extends Component {
                         <Subheading style={styles.subheading}>{age}</Subheading>
                         <Subheading style={styles.subheading}>{weight}</Subheading>
                     </Row>
-                    <ProgressBar title='Food target' progress={foodTarget} color='red' />
-                    <ProgressBar title='Play target' progress={playTarget} color='blue' />
+                    <ProgressBar title='Food target' progress={feedingTarget} color='red' />
+                    <ProgressBar title='Play target' progress={playtimeTarget} color='blue' />
                 </View>
                 <View style={styles.modalOpener}>
                     <Button style='FAB' onPress={this.displayModal}>
@@ -114,16 +118,16 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         age: state.cat.age,
-        foodTarget: state.cat.foodTarget,
+        feedingTarget: state.feeding.feedingTarget,
         name: state.cat.name,
-        playTarget: state.cat.playTarget,
+        playtimeTarget: state.playtime.playtimeTarget,
         weight: state.cat.weight
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAddEntry: (entry) => dispatch(addEntry(entry))
+        onCheckFeedingTarget: () => dispatch(checkFeedingTarget())
     }
 }
 

@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import FeedingForm from '../components/entry/forms/FeedingForm';
 import PoopingForm from '../components/entry/forms/PoopingForm';
-import PlayingForm from '../components/entry/forms/PlayingForm';
+import PlaytimeForm from '../components/entry/forms/PlaytimeForm';
 import DewormingForm from '../components/entry/forms/DewormingForm';
 import MedicineForm from '../components/entry/forms/MedicineForm';
 import VetVisitForm from '../components/entry/forms/VetVisitForm';
@@ -18,8 +18,8 @@ export default class EntryFormScreen extends Component {
                 return <FeedingForm returnToProfile={this.backToProfile} />;
             case 'Pooping':
                 return <PoopingForm returnToProfile={this.backToProfile} />;
-            case 'Playing':
-                return <PlayingForm returnToProfile={this.backToProfile} />;
+            case 'Playtime':
+                return <PlaytimeForm returnToProfile={this.backToProfile} />;
             case 'Deworming':
                 return <DewormingForm returnToProfile={this.backToProfile} />;
             case 'Medicine':

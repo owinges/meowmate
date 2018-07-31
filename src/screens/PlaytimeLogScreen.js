@@ -1,8 +1,35 @@
 import React, { Component } from 'react';
+import { Navigation } from 'react-native-navigation';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
-class EntryLogScreen extends Component {
+class PlaytimeLogScreen extends Component {
+    static navigatorButtons = {
+        leftButtons: [
+            {
+                title: 'Back',
+                id: 'back'
+            }
+        ]
+    };
+
+    constructor(props) {
+        super(props);
+
+        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+    }
+
+    onNavigatorEvent = event => {
+        if (event.type === 'NavBarButtonPress') {
+            Navigation.startSingleScreenApp({
+                screen: {
+                    screen: 'meowmate.ProfileScreen',
+                    title: 'MeowMate'
+                }
+            });
+        }
+    }
+
     render() {
         // Sort entries by month in descending order
         const entries = this.props.entries.sort((a, b) => a.date < b.date);
@@ -10,13 +37,23 @@ class EntryLogScreen extends Component {
         // Function for sorting entries by time in descending order
         const sorted = array => array.sort((a, b) => a.time < b.time);
 
+        const getTotalDuration = index => {
+            let total = 0;
+
+            entries[index].data.forEach(entry => {
+                total += entry.duration;
+            })
+
+            return total;
+        }
+
         return (
             <View style={styles.container}>
                 <FlatList
                     style={styles.list}
                     data={entries}
                     keyExtractor={item => item.date.format()}
-                    renderItem={({ item }) => (
+                    renderItem={({ item, index }) => (
                         <View style={styles.entry}>
                             <View style={styles.date}>
                                 <Text style={styles.dateText}>
@@ -30,16 +67,13 @@ class EntryLogScreen extends Component {
                                     <View style={styles.nestedItem}>
                                         <Text>{item.time.format('hh:mm A')}</Text>
                                         <View style={styles.item}>
-                                            <Text style={styles.itemText}>Food Type:</Text>
-                                            <Text style={styles.itemText}>{item.foodType}</Text>
-                                        </View>
-                                        <View style={styles.item}>
-                                            <Text style={styles.itemText}>Quantity:</Text>
-                                            <Text style={styles.itemText}>{item.quantity} g</Text>
+                                            <Text style={styles.itemText}>Duration:</Text>
+                                            <Text style={styles.itemText}>{item.duration} minutes</Text>
                                         </View>
                                     </View>
                                 )}
                             />
+                            <Text>Total: {getTotalDuration(index)} minutes</Text>
                         </View>
                     )}
                 />
@@ -86,8 +120,8 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => {
     return {
-        entries: state.feeding.entries
+        entries: state.playtime.entries
     }
 }
 
-export default connect(mapStateToProps, null)(EntryLogScreen);
+export default connect(mapStateToProps, null)(PlaytimeLogScreen);

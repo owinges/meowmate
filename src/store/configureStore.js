@@ -2,10 +2,14 @@ import { createStore, combineReducers, compose } from 'redux';
 
 import catReducer from './catReducer';
 import feedingReducer from './feedingReducer';
+import playtimeReducer from './playtimeReducer';
+import poopingReducer from './poopingReducer';
 
 const rootReducer = combineReducers({
     cat: catReducer,
-    feeding: feedingReducer
+    feeding: feedingReducer,
+    playtime: playtimeReducer,
+    pooping: poopingReducer
 });
 
 let composeEnhancers = compose;

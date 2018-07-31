@@ -12,7 +12,7 @@ const EntryList = ({ showForm }) => (
                 <ListItem icon='pizza' title='Feeding' showForm={showForm} />
             </Column>
             <Column style={styles.column}>
-                <ListItem icon='happy' title='Playing' showForm={showForm} />
+                <ListItem icon='happy' title='Playtime' showForm={showForm} />
             </Column>
             <Column style={styles.column}>
                 <ListItem icon='cloud' title='Pooping' showForm={showForm} />

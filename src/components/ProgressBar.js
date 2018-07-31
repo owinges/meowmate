@@ -15,7 +15,7 @@ export default class ProgressBar extends Component {
                 <Row style={{ marginBottom: 8, marginTop: 8 }}>
                     <Text style={styles.title}>{title}</Text>
                     <View style={{ flex: 1 }}></View>
-                    <Text style={styles.counter}>50/100</Text>
+                    <Text style={styles.counter}>{`${progress/2}/${progress}`}</Text>
                 </Row>
             );
         }
@@ -27,7 +27,7 @@ export default class ProgressBar extends Component {
                     <View style={styles.container}>
                         <View style={[
                             styles.bar,
-                            { backgroundColor: color, width: `${progress}%` }
+                            { backgroundColor: color, width: `${50}%` }
                         ]}></View>
                     </View>
                 </Row>
