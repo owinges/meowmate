@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Navigation } from 'react-native-navigation';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
+
+import { deleteEntry } from '../store/entryActions';
 
 class FeedingLogScreen extends Component {
     static navigatorButtons = {
@@ -54,7 +56,7 @@ class FeedingLogScreen extends Component {
                 <FlatList
                     style={styles.list}
                     data={entries}
-                    keyExtractor={item => item.date}
+                    keyExtractor={item => moment(item.date).format()}
                     renderItem={({ item, index }) => (
                         <View style={styles.entry}>
                             <View style={styles.date}>
@@ -63,7 +65,7 @@ class FeedingLogScreen extends Component {
                                 </Text>
                             </View>
                             <FlatList
-                                keyExtractor={item => item.time}
+                                keyExtractor={item => moment(item.time).format()}
                                 data={sorted(item.data)}
                                 renderItem={({ item }) => (
                                     <View style={styles.nestedItem}>
@@ -73,9 +75,12 @@ class FeedingLogScreen extends Component {
                                                 <Text style={styles.itemText}>{item.foodType}</Text>
                                                 <Text style={styles.itemText}>{item.quantity} g</Text>
                                             </View>
-                                            <View style={{ alignSelf: 'center' }}>
+                                            <TouchableOpacity
+                                                style={{ alignSelf: 'center' }}
+                                                onPress={() => this.props.onDeleteEntry(item.time.format())}
+                                            >
                                                 <Icon name='ios-trash' color='red' size={30} />
-                                            </View>
+                                            </TouchableOpacity>
                                         </View>
                                     </View>
                                 )}
@@ -134,4 +139,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(FeedingLogScreen);
+const mapDispatchToProps = dispatch => {
+    return {
+        onDeleteEntry: (feeding) => dispatch(deleteEntry(feeding))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FeedingLogScreen);

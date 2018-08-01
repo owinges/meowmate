@@ -53,7 +53,7 @@ class PlaytimeLogScreen extends Component {
                 <FlatList
                     style={styles.list}
                     data={entries}
-                    keyExtractor={item => item.date}
+                    keyExtractor={item => moment(item.date).format()}
                     renderItem={({ item, index }) => (
                         <View style={styles.entry}>
                             <View style={styles.date}>
@@ -62,7 +62,7 @@ class PlaytimeLogScreen extends Component {
                                 </Text>
                             </View>
                             <FlatList
-                                keyExtractor={item => item.time}
+                                keyExtractor={item => moment(item.time).format()}
                                 data={sorted(item.data)}
                                 renderItem={({ item }) => (
                                     <View style={styles.nestedItem}>

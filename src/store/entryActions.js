@@ -3,6 +3,7 @@ export const ADD_FEEDING = 'ADD_FEEDING';
 export const ADD_PLAYTIME = 'ADD_PLAYTIME';
 export const ADD_POOPING = 'ADD_POOPING';
 export const CHECK_FEEDING_TARGET = 'CHECK_FEEDING_TARGET';
+export const DELETE_ENTRY = 'DELETE_ENTRY';
 
 // Export actions
 export const addFeeding = ({ date, foodType, quantity }) => {
@@ -33,5 +34,12 @@ export const addPlaytime = ({ date, duration }) => {
 export const checkFeedingTarget = () => {
     return {
         type: CHECK_FEEDING_TARGET
+    }
+}
+
+export const deleteEntry = time => {
+    return {
+        type: DELETE_ENTRY,
+        time
     }
 }

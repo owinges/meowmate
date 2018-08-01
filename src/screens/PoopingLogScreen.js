@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navigation } from 'react-native-navigation';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
@@ -43,7 +44,7 @@ class PoopingLogScreen extends Component {
                 <FlatList
                     style={styles.list}
                     data={entries}
-                    keyExtractor={item => item.date}
+                    keyExtractor={item => moment(item.date).format()}
                     renderItem={({ item }) => (
                         <View style={styles.entry}>
                             <View style={styles.date}>
@@ -52,14 +53,23 @@ class PoopingLogScreen extends Component {
                                 </Text>
                             </View>
                             <FlatList
-                                keyExtractor={item => item.time}
+                                keyExtractor={item => moment(item.time).format()}
                                 data={sorted(item.data)}
                                 renderItem={({ item }) => (
                                     <View style={styles.nestedItem}>
-                                        <Text>{moment(item.time).format('hh:mm A')}</Text>
                                         <View style={styles.item}>
-                                            <Text style={styles.itemText}>Consistency:</Text>
-                                            <Text style={styles.itemText}>{item.consistency}</Text>
+                                            <View>
+                                                <Text>{moment(item.time).format('hh:mm A')}</Text>
+                                                <View style={styles.item}>
+                                                    <Text style={styles.itemText}>{item.consistency}</Text>
+                                                </View>
+                                            </View>
+                                            <TouchableOpacity
+                                                style={{ alignSelf: 'center' }}
+                                                onPress={() => this.props.onDeleteEntry(item.time.format())}
+                                            >
+                                                <Icon name='ios-trash' color='red' size={30} />
+                                            </TouchableOpacity>
                                         </View>
                                     </View>
                                 )}

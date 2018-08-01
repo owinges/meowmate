@@ -1,24 +1,24 @@
-import { ADD_FEEDING, CHECK_FEEDING_TARGET } from './entryActions';
+import { ADD_FEEDING, CHECK_FEEDING_TARGET, DELETE_ENTRY } from './entryActions';
 import moment from 'moment';
 
 const initialState = {
     feedingTarget: 500,
     entries: [
         {
-            date: moment([2019, 2, 23]),
+            date: moment([2018, 6, 23, 1]),
             data: [
                 {
-                    time: moment([2018, 7, 23, 1]),
+                    time: moment([2018, 6, 23, 1]),
                     foodType: 'Wet food',
                     quantity: 100
                 },
                 {
-                    time: moment([2018, 7, 23, 2]),
+                    time: moment([2018, 6, 23, 2]),
                     foodType: 'Wet food',
                     quantity: 100
                 },
                 {
-                    time: moment([2018, 7, 23, 3]),
+                    time: moment([2018, 6, 23, 3]),
                     foodType: 'Wet food',
                     quantity: 100
                 }
@@ -26,7 +26,7 @@ const initialState = {
             feedingTarget: 500
         },
         {
-            date: moment([2016, 9, 20]),
+            date: moment([2018, 7, 20, 4]),
             data: [
                 {
                     time: moment([2018, 7, 20, 4]),
@@ -87,6 +87,26 @@ const reducer = (state = initialState, action) => {
                     })
                 };
             }
+        case DELETE_ENTRY:
+            const date = state.entries.findIndex(entry => {
+                return moment(entry.date).isSame(action.time, 'day');
+            })
+
+            return {
+                ...state,
+                entries: state.entries.map((entry, index) => {
+                    if (index !== date) {
+                        return entry;
+                    } else {
+                        return {
+                            ...entry,
+                            data: entry.data.filter(entry => {
+                                return entry.time.format() !== action.time;
+                            })
+                        };
+                    }
+                })
+            };
         case CHECK_FEEDING_TARGET:
             const today = moment();
 
