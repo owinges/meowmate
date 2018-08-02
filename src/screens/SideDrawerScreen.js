@@ -10,6 +10,25 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class SideDrawerScreen extends Component {
+
+    displayCalendar = () => {
+        this.props.navigator.handleDeepLink({
+            link: 'Calendar'
+        });
+    }
+
+    displayCatDetails = () => {
+        this.props.navigator.handleDeepLink({
+            link: 'CatDetails'
+        });
+    }
+
+    displayEntryLog = () => {
+        this.props.navigator.handleDeepLink({
+            link: 'EntryLog'
+        });
+    }
+
     render() {
         return (
             <View
@@ -20,15 +39,37 @@ export default class SideDrawerScreen extends Component {
                         : Dimensions.get('window').width
                     }
                 ]}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.displayCatDetails}>
                     <View style={styles.drawerItem}>
                         <Icon
-                            name={Platform.OS === 'android' ? 'md-log-out' : 'ios-log-out'}
+                            name={Platform.OS === 'android' ? 'md-contact' : 'ios-contact'}
                             size={30}
                             color='#aaa'
                             style={styles.drawerItemIcon}
                         />
-                        <Text>Sign Out</Text>
+                        <Text>Cat Info</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={this.displayCalendar}>
+                    <View style={styles.drawerItem}>
+                        <Icon
+                            name={Platform.OS === 'android' ? 'md-calendar' : 'ios-calendar'}
+                            size={30}
+                            color='#aaa'
+                            style={styles.drawerItemIcon}
+                        />
+                        <Text>Calendar</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={this.displayEntryLog}>
+                    <View style={styles.drawerItem}>
+                        <Icon
+                            name={Platform.OS === 'android' ? 'md-list' : 'ios-list'}
+                            size={30}
+                            color='#aaa'
+                            style={styles.drawerItemIcon}
+                        />
+                        <Text>Entry Log</Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -46,6 +87,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#eee',
         flexDirection: 'row',
+        marginBottom: 6,
         padding: 10
     },
     drawerItemIcon: {

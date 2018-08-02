@@ -50,15 +50,9 @@ class CalendarScreen extends Component {
             <View style={styles.container}>
                 <Calendar
                     style={styles.calendar}
-                    // Handler which gets executed on day press. Default = undefined
-                    // onDayPress={(day) => { console.log('selected day', day) }}
                     onDayPress={day => this.selectDate(day.dateString)}
-                    // Handler which gets executed on day long press. Default = undefined
-                    onDayLongPress={(day) => { console.log('selected day', day) }}
                     // Month format in calendar title. Formatting values: http://arshaw.com/xdate/#Formatting
                     monthFormat={'MMMM yyyy'}
-                    // Handler which gets executed when visible month changes in calendar. Default = undefined
-                    onMonthChange={(month) => { console.log('month changed', month) }}
                     // Do not show days of other months in month page. Default = false
                     hideExtraDays={true}
                     // Handler which gets executed when press arrow icon left. It receive a callback can go back month
@@ -107,7 +101,6 @@ const styles = StyleSheet.create({
         flex: 1
     },
     calendar: {
-        flex: 1
     },
     infoBox: {
         alignItems: 'center',

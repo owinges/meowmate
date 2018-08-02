@@ -1,46 +1,49 @@
-import { ADD_FEEDING, CHECK_FEEDING_TARGET, DELETE_ENTRY } from './entryActions';
+import { ADD_FEEDING, CHECK_FEEDING_TARGET, DELETE_FEEDING } from './entryActions';
 import moment from 'moment';
 
 const initialState = {
-    feedingTarget: 500,
+    feedingTarget: {
+        target: 200,
+        fulfilled: 0
+    },
     entries: [
-        {
-            date: moment([2018, 6, 23, 1]),
-            data: [
-                {
-                    time: moment([2018, 6, 23, 1]),
-                    foodType: 'Wet food',
-                    quantity: 100
-                },
-                {
-                    time: moment([2018, 6, 23, 2]),
-                    foodType: 'Wet food',
-                    quantity: 100
-                },
-                {
-                    time: moment([2018, 6, 23, 3]),
-                    foodType: 'Wet food',
-                    quantity: 100
-                }
-            ],
-            feedingTarget: 500
-        },
-        {
-            date: moment([2018, 7, 20, 4]),
-            data: [
-                {
-                    time: moment([2018, 7, 20, 4]),
-                    foodType: 'Wet food',
-                    quantity: 100
-                },
-                {
-                    time: moment([2018, 7, 20, 5]),
-                    foodType: 'Wet food',
-                    quantity: 100
-                }
-            ],
-            feedingTarget: 500
-        }
+        // {
+        //     date: moment([2018, 6, 23, 1]),
+        //     data: [
+        //         {
+        //             time: moment([2018, 6, 23, 1]),
+        //             foodType: 'Wet food',
+        //             quantity: 100
+        //         },
+        //         {
+        //             time: moment([2018, 6, 23, 2]),
+        //             foodType: 'Wet food',
+        //             quantity: 100
+        //         },
+        //         {
+        //             time: moment([2018, 6, 23, 3]),
+        //             foodType: 'Wet food',
+        //             quantity: 100
+        //         }
+        //     ],
+        //     feedingTarget: 500
+        // },
+        // {
+        //     date: moment([2018, 7, 20, 4]),
+        //     data: [
+        //         {
+        //             time: moment([2018, 7, 20, 4]),
+        //             foodType: 'Wet food',
+        //             quantity: 100
+        //         },
+        //         {
+        //             time: moment([2018, 7, 20, 5]),
+        //             foodType: 'Wet food',
+        //             quantity: 100
+        //         }
+        //     ],
+        //     feedingTarget: 500
+        // }
     ]
 };
 
@@ -63,7 +66,10 @@ const reducer = (state = initialState, action) => {
                             foodType: action.foodType,
                             quantity: Number(action.quantity)
                         }],
-                        feedingTarget: state.feedingTarget
+                        feedingTarget: {
+                            target: state.feedingTarget.target,
+                            fulfilled: Number(action.quantity)
+                        }
                     }]
                 };
             } else {
@@ -81,13 +87,16 @@ const reducer = (state = initialState, action) => {
                                     foodType: action.foodType,
                                     quantity: Number(action.quantity)
                                 }],
-                                feedingTarget: entry.data.feedingTarget - action.quantity
+                                feedingTarget: {
+                                    target: Number(entry.feedingTarget.target),
+                                    fulfilled: entry.feedingTarget.fulfilled + Number(action.quantity)
+                                }
                             };
                         }
                     })
                 };
             }
-        case DELETE_ENTRY:
+        case DELETE_FEEDING:
             const date = state.entries.findIndex(entry => {
                 return moment(entry.date).isSame(action.time, 'day');
             })
@@ -101,8 +110,12 @@ const reducer = (state = initialState, action) => {
                         return {
                             ...entry,
                             data: entry.data.filter(entry => {
-                                return entry.time.format() !== action.time;
-                            })
+                                return moment(entry.time).format() !== action.time;
+                            }),
+                            feedingTarget: {
+                                ...entry.feedingTarget,
+                                fulfilled: entry.feedingTarget.fulfilled - Number(action.quantity)
+                            }
                         };
                     }
                 })

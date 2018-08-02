@@ -1,17 +1,17 @@
-import { ADD_POOPING } from './entryActions';
+import { ADD_POOPING, DELETE_POOPING } from './entryActions';
 import moment from 'moment';
 
 const initialState = {
     entries: [
-        {
-            date: moment([2019, 2, 23]),
-            data: [
-                {
-                    time: moment([2019, 2, 23]),
-                    consistency: 'Dry'
-                }
-            ]
-        }
+        // {
+        //     date: moment([2019, 2, 23]),
+        //     data: [
+        //         {
+        //             time: moment([2019, 2, 23]),
+        //             consistency: 'Dry'
+        //         }
+        //     ]
+        // }
     ]
 }
 
@@ -54,6 +54,26 @@ const reducer = (state = initialState, action) => {
                     })
                 };
             }
+        case DELETE_POOPING:
+            const date = state.entries.findIndex(entry => {
+                return moment(entry.date).isSame(action.time, 'day');
+            })
+
+            return {
+                ...state,
+                entries: state.entries.map((entry, index) => {
+                    if (index !== date) {
+                        return entry;
+                    } else {
+                        return {
+                            ...entry,
+                            data: entry.data.filter(entry => {
+                                return moment(entry.time).format() !== action.time;
+                            })
+                        };
+                    }
+                })
+            };
         default:
             return state;
     }

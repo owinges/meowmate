@@ -9,6 +9,7 @@ import {
 import { Navigation } from 'react-native-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
+import moment from 'moment';
 
 import { Row } from '../components/UI/grid';
 import { Header, Subheading } from '../components/UI/typography';
@@ -22,13 +23,41 @@ class ProfileScreen extends Component {
     constructor(props) {
         super(props);
         this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+
+        this.state = {
+            feedingTarget: {
+                target: 0,
+                fulfilled: 0
+            }
+        }
     }
 
     onNavigatorEvent = event => {
+        const toggleDrawer = () => {
+            this.props.navigator.toggleDrawer({
+                side: 'right'
+            });
+        }
+
         if (event.type === 'NavBarButtonPress') {
             if (event.id === 'sideDrawerToggle') {
-                this.props.navigator.toggleDrawer({
-                    side: 'right'
+                toggleDrawer();
+            }
+        } else if (event.type == 'DeepLink') {
+            if (event.link === 'Calendar') {
+                toggleDrawer();
+                this.props.navigator.push({
+                    screen: 'meowmate.CalendarScreen',
+                    title: 'Calendar'
+                });
+            } else if (event.link === 'EntryLog') {
+                toggleDrawer();
+                logTabs();
+            } else if (event.link === 'CatDetails') {
+                toggleDrawer();
+                this.props.navigator.push({
+                    screen: 'meowmate.CatDetailsScreen',
+                    title: 'Cat Details'
                 });
             }
         }
@@ -43,19 +72,35 @@ class ProfileScreen extends Component {
     }
 
     displayEntryLog = () => {
-        this.props.navigator.push({
-            screen: 'meowmate.CalendarScreen',
-            title: 'Calendar'
+        logTabs();
+    }
+
+    getDaysFeedingTarget = () => {
+        const today = moment();
+
+        const index = this.props.feedingEntries.findIndex(entry => {
+            return moment(entry.date).isSame(today, 'day');
+        })
+
+        this.setState({
+            feedingTarget: {
+                target: this.props.feedingEntries[index].feedingTarget.target,
+                fulfilled: this.props.feedingEntries[index].feedingTarget.fulfilled
+            }
         });
-        // logTabs();
     }
 
     componentWillMount() {
         this.props.onCheckFeedingTarget();
     }
 
+    componentDidMount() {
+        this.getDaysFeedingTarget();
+    }
+
     render() {
-        const { age, feedingTarget, name, playtimeTarget, weight } = this.props;
+        const { feedingTarget } = this.state;
+        const { age, name, playtimeTarget, weight } = this.props;
 
         return (
             <View style={styles.container}>
@@ -137,7 +182,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         age: state.cat.age,
-        feedingTarget: state.feeding.feedingTarget,
+        feedingEntries: state.feeding.entries,
         name: state.cat.name,
         playtimeTarget: state.playtime.playtimeTarget,
         weight: state.cat.weight

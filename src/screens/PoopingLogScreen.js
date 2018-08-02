@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { Navigation } from 'react-native-navigation';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
+
+import displayProfileScreen from './displayProfileScreen';
+import { deletePooping } from '../store/entryActions';
 
 class PoopingLogScreen extends Component {
     static navigatorButtons = {
         leftButtons: [
             {
                 title: 'Back',
-                id: 'back'
+                id: 'cancel'
             }
         ]
     };
@@ -23,12 +25,7 @@ class PoopingLogScreen extends Component {
 
     onNavigatorEvent = event => {
         if (event.type === 'NavBarButtonPress') {
-            Navigation.startSingleScreenApp({
-                screen: {
-                    screen: 'meowmate.ProfileScreen',
-                    title: 'MeowMate'
-                }
-            });
+            displayProfileScreen();
         }
     }
 
@@ -66,7 +63,7 @@ class PoopingLogScreen extends Component {
                                             </View>
                                             <TouchableOpacity
                                                 style={{ alignSelf: 'center' }}
-                                                onPress={() => this.props.onDeleteEntry(item.time.format())}
+                                                onPress={() => this.props.onDeletePooping(moment(item.time).format())}
                                             >
                                                 <Icon name='ios-trash' color='red' size={30} />
                                             </TouchableOpacity>
@@ -124,4 +121,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(PoopingLogScreen);
+const mapDispatchToProps = dispatch => {
+    return {
+        onDeletePooping: (pooping) => dispatch(deletePooping(pooping))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PoopingLogScreen);

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Navigation } from 'react-native-navigation';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
-import { deleteEntry } from '../store/entryActions';
+import displayProfileScreen from './displayProfileScreen';
+import { deleteFeeding } from '../store/entryActions';
 
 class FeedingLogScreen extends Component {
     static navigatorButtons = {
         leftButtons: [
             {
                 title: 'Back',
-                id: 'back'
+                id: 'cancel'
             }
         ]
     };
@@ -25,12 +25,7 @@ class FeedingLogScreen extends Component {
 
     onNavigatorEvent = event => {
         if (event.type === 'NavBarButtonPress') {
-            Navigation.startSingleScreenApp({
-                screen: {
-                    screen: 'meowmate.ProfileScreen',
-                    title: 'MeowMate'
-                }
-            });
+            displayProfileScreen();
         }
     }
 
@@ -41,23 +36,13 @@ class FeedingLogScreen extends Component {
         // Function for sorting entries by time in descending order
         const sorted = array => array.sort((a, b) => a.time < b.time);
 
-        const getTotalQuantity = index => {
-            let total = 0;
-
-            entries[index].data.forEach(entry => {
-                total += entry.quantity;
-            })
-
-            return total;
-        }
-
         return (
             <View style={styles.container}>
                 <FlatList
                     style={styles.list}
                     data={entries}
                     keyExtractor={item => moment(item.date).format()}
-                    renderItem={({ item, index }) => (
+                    renderItem={({ item }) => (
                         <View style={styles.entry}>
                             <View style={styles.date}>
                                 <Text style={styles.dateText}>
@@ -77,7 +62,7 @@ class FeedingLogScreen extends Component {
                                             </View>
                                             <TouchableOpacity
                                                 style={{ alignSelf: 'center' }}
-                                                onPress={() => this.props.onDeleteEntry(item.time.format())}
+                                                onPress={() => this.props.onDeleteFeeding(moment(item.time).format(), item.quantity)}
                                             >
                                                 <Icon name='ios-trash' color='red' size={30} />
                                             </TouchableOpacity>
@@ -85,7 +70,7 @@ class FeedingLogScreen extends Component {
                                     </View>
                                 )}
                             />
-                            <Text style={styles.totalText}>Total: {getTotalQuantity(index)} g</Text>
+                            <Text style={styles.totalText}>Total: {item.feedingTarget.fulfilled} g / {item.feedingTarget.target} g</Text>
                         </View>
                     )}
                 />
@@ -141,7 +126,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onDeleteEntry: (feeding) => dispatch(deleteEntry(feeding))
+        onDeleteFeeding: (time, quantity) => dispatch(deleteFeeding(time, quantity))
     }
 }
 

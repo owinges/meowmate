@@ -1,18 +1,18 @@
-import { ADD_PLAYTIME } from './entryActions';
+import { ADD_PLAYTIME, DELETE_PLAYTIME } from './entryActions';
 import moment from 'moment';
 
 const initialState = {
     playtimeTarget: 60,
     entries: [
-        {
-            date: moment([2019, 2, 23]),
-            data: [
-                {
-                    time: moment([2019, 2, 23]),
-                    duration: 15
-                }
-            ]
-        }
+        // {
+        //     date: moment([2019, 2, 23]),
+        //     data: [
+        //         {
+        //             time: moment([2019, 2, 23]),
+        //             duration: 15
+        //         }
+        //     ]
+        // }
     ]
 }
 
@@ -55,6 +55,26 @@ const reducer = (state = initialState, action) => {
                     })
                 };
             }
+        case DELETE_PLAYTIME:
+            const date = state.entries.findIndex(entry => {
+                return moment(entry.date).isSame(action.time, 'day');
+            })
+
+            return {
+                ...state,
+                entries: state.entries.map((entry, index) => {
+                    if (index !== date) {
+                        return entry;
+                    } else {
+                        return {
+                            ...entry,
+                            data: entry.data.filter(entry => {
+                                return moment(entry.time).format() !== action.time;
+                            })
+                        };
+                    }
+                })
+            };
         default:
             return state;
     }

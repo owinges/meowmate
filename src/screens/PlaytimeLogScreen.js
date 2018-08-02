@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { Navigation } from 'react-native-navigation';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
+
+import displayProfileScreen from './displayProfileScreen';
+import { deletePlaytime } from '../store/entryActions';
 
 class PlaytimeLogScreen extends Component {
     static navigatorButtons = {
         leftButtons: [
             {
                 title: 'Back',
-                id: 'back'
+                id: 'cancel'
             }
         ]
     };
@@ -22,12 +25,7 @@ class PlaytimeLogScreen extends Component {
 
     onNavigatorEvent = event => {
         if (event.type === 'NavBarButtonPress') {
-            Navigation.startSingleScreenApp({
-                screen: {
-                    screen: 'meowmate.ProfileScreen',
-                    title: 'MeowMate'
-                }
-            });
+            displayProfileScreen();
         }
     }
 
@@ -66,10 +64,19 @@ class PlaytimeLogScreen extends Component {
                                 data={sorted(item.data)}
                                 renderItem={({ item }) => (
                                     <View style={styles.nestedItem}>
-                                        <Text>{moment(item.time).format('hh:mm A')}</Text>
                                         <View style={styles.item}>
-                                            <Text style={styles.itemText}>Duration:</Text>
-                                            <Text style={styles.itemText}>{item.duration} minutes</Text>
+                                            <View>
+                                                <Text>{moment(item.time).format('hh:mm A')}</Text>
+                                                <View style={styles.item}>
+                                                    <Text style={styles.itemText}>{item.duration} minutes</Text>
+                                                </View>
+                                            </View>
+                                            <TouchableOpacity
+                                                style={{ alignSelf: 'center' }}
+                                                onPress={() => this.props.onDeletePlaytime(moment(item.time).format())}
+                                            >
+                                                <Icon name='ios-trash' color='red' size={30} />
+                                            </TouchableOpacity>
                                         </View>
                                     </View>
                                 )}
@@ -125,4 +132,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(PlaytimeLogScreen);
+const mapDispatchToProps = dispatch => {
+    return {
+        onDeletePlaytime: (playtime) => dispatch(deletePlaytime(playtime))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlaytimeLogScreen);
