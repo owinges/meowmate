@@ -36,16 +36,6 @@ class PlaytimeLogScreen extends Component {
         // Function for sorting entries by time in descending order
         const sorted = array => array.sort((a, b) => a.time < b.time);
 
-        const getTotalDuration = index => {
-            let total = 0;
-
-            entries[index].data.forEach(entry => {
-                total += entry.duration;
-            })
-
-            return total;
-        }
-
         return (
             <View style={styles.container}>
                 <FlatList
@@ -81,7 +71,7 @@ class PlaytimeLogScreen extends Component {
                                     </View>
                                 )}
                             />
-                            <Text>Total: {getTotalDuration(index)} minutes</Text>
+                            <Text style={styles.totalText}>Total: {item.playtimeTarget.fulfilled} / {item.playtimeTarget.target} minutes</Text>
                         </View>
                     )}
                 />
@@ -123,6 +113,9 @@ const styles = StyleSheet.create({
     nestedItem: {
         marginTop: 4,
         marginBottom: 4
+    },
+    totalText: {
+        textAlign: 'right'
     }
 })
 

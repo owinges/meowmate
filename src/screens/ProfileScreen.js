@@ -16,7 +16,7 @@ import { Header, Subheading } from '../components/UI/typography';
 import Button from '../components/Button';
 import ProgressBar from '../components/ProgressBar';
 
-import { checkFeedingTarget } from '../store/entryActions';
+import { checkFeedingTarget, checkPlaytimeTarget } from '../store/entryActions';
 import logTabs from './logTabs';
 
 class ProfileScreen extends Component {
@@ -26,6 +26,10 @@ class ProfileScreen extends Component {
 
         this.state = {
             feedingTarget: {
+                target: 0,
+                fulfilled: 0
+            },
+            playtimeTarget: {
                 target: 0,
                 fulfilled: 0
             }
@@ -75,32 +79,67 @@ class ProfileScreen extends Component {
         logTabs();
     }
 
-    getDaysFeedingTarget = () => {
+    getDaysTargetValues = (props) => {
         const today = moment();
 
-        const index = this.props.feedingEntries.findIndex(entry => {
+        const indexFeeding = props.feedingEntries.findIndex(entry => {
+            return moment(entry.date).isSame(today, 'day');
+        })
+
+        const indexPlaytime = props.playtimeEntries.findIndex(entry => {
             return moment(entry.date).isSame(today, 'day');
         })
 
         this.setState({
             feedingTarget: {
-                target: this.props.feedingEntries[index].feedingTarget.target,
-                fulfilled: this.props.feedingEntries[index].feedingTarget.fulfilled
+                target: props.feedingEntries[indexFeeding].feedingTarget.target,
+                fulfilled: props.feedingEntries[indexFeeding].feedingTarget.fulfilled
+            },
+            playtimeTarget: {
+                target: props.playtimeEntries[indexPlaytime].playtimeTarget.target,
+                fulfilled: props.playtimeEntries[indexPlaytime].playtimeTarget.fulfilled
             }
         });
     }
 
+    getFeedingTarget = () => {
+        const today = moment();
+
+        const indexFeeding = this.props.feedingEntries.findIndex(entry => {
+            return moment(entry.date).isSame(today, 'day');
+        })
+
+        return this.props.feedingEntries[indexFeeding].feedingTarget;
+    }
+    getPlaytimeTarget = () => {
+        const today = moment();
+
+        const indexPlaytime = this.props.playtimeEntries.findIndex(entry => {
+            return moment(entry.date).isSame(today, 'day');
+        })
+
+        let test = {};
+        test = this.props.playtimeEntries[indexPlaytime].playtimeTarget;
+
+        return test;
+    }
+
+    componentWillReceiveProps(newProps) {
+        this.getDaysTargetValues(newProps);
+    }
+
     componentWillMount() {
         this.props.onCheckFeedingTarget();
+        this.props.onCheckPlaytimeTarget();
     }
 
     componentDidMount() {
-        this.getDaysFeedingTarget();
+        this.getDaysTargetValues(this.props);
     }
 
     render() {
-        const { feedingTarget } = this.state;
-        const { age, name, playtimeTarget, weight } = this.props;
+        const { feedingTarget, playtimeTarget } = this.state;
+        const { age, name, weight } = this.props;
 
         return (
             <View style={styles.container}>
@@ -184,14 +223,15 @@ const mapStateToProps = state => {
         age: state.cat.age,
         feedingEntries: state.feeding.entries,
         name: state.cat.name,
-        playtimeTarget: state.playtime.playtimeTarget,
+        playtimeEntries: state.playtime.entries,
         weight: state.cat.weight
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onCheckFeedingTarget: () => dispatch(checkFeedingTarget())
+        onCheckFeedingTarget: () => dispatch(checkFeedingTarget()),
+        onCheckPlaytimeTarget: () => dispatch(checkPlaytimeTarget())
     }
 }
 

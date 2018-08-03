@@ -26,7 +26,7 @@ const initialState = {
         //             quantity: 100
         //         }
         //     ],
-        //     feedingTarget: 500
+        //     feedingTarget: {}
         // },
         // {
         //     date: moment([2018, 7, 20, 4]),
@@ -42,7 +42,7 @@ const initialState = {
         //             quantity: 100
         //         }
         //     ],
-        //     feedingTarget: 500
+        //     feedingTarget: {}
         // }
     ]
 };

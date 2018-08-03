@@ -3,6 +3,7 @@ export const ADD_FEEDING = 'ADD_FEEDING';
 export const ADD_PLAYTIME = 'ADD_PLAYTIME';
 export const ADD_POOPING = 'ADD_POOPING';
 export const CHECK_FEEDING_TARGET = 'CHECK_FEEDING_TARGET';
+export const CHECK_PLAYTIME_TARGET = 'CHECK_PLAYTIME_TARGET';
 export const DELETE_FEEDING = 'DELETE_FEEDING';
 export const DELETE_PLAYTIME = 'DELETE_PLAYTIME';
 export const DELETE_POOPING = 'DELETE_POOPING';
@@ -36,6 +37,12 @@ export const addPlaytime = ({ date, duration }) => {
 export const checkFeedingTarget = () => {
     return {
         type: CHECK_FEEDING_TARGET
+    }
+}
+
+export const checkPlaytimeTarget = () => {
+    return {
+        type: CHECK_PLAYTIME_TARGET
     }
 }
 

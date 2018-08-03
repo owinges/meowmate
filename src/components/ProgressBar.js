@@ -4,8 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Row } from './UI/grid';
 
 export default class ProgressBar extends Component {
-    render() {
 
+    render() {
         const { color, progress, title } = this.props;
 
         let titleText = null;

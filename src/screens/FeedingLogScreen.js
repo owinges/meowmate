@@ -70,7 +70,7 @@ class FeedingLogScreen extends Component {
                                     </View>
                                 )}
                             />
-                            <Text style={styles.totalText}>Total: {item.feedingTarget.fulfilled} g / {item.feedingTarget.target} g</Text>
+                            <Text style={styles.totalText}>Total: {item.feedingTarget.fulfilled} / {item.feedingTarget.target} g</Text>
                         </View>
                     )}
                 />

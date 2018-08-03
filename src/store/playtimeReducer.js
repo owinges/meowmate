@@ -1,8 +1,11 @@
-import { ADD_PLAYTIME, DELETE_PLAYTIME } from './entryActions';
+import { ADD_PLAYTIME, CHECK_PLAYTIME_TARGET, DELETE_PLAYTIME } from './entryActions';
 import moment from 'moment';
 
 const initialState = {
-    playtimeTarget: 60,
+    playtimeTarget: {
+        target: 60,
+        fulfilled: 0
+    },
     entries: [
         // {
         //     date: moment([2019, 2, 23]),
@@ -11,7 +14,11 @@ const initialState = {
         //             time: moment([2019, 2, 23]),
         //             duration: 15
         //         }
-        //     ]
+        //     ],
+        //     playtimeTarget: {
+        //         target: 60,
+        //         fulfilled: 15
+        //     }
         // }
     ]
 }
@@ -33,7 +40,11 @@ const reducer = (state = initialState, action) => {
                         data: [{
                             time: action.date,
                             duration: Number(action.duration)
-                        }]
+                        }],
+                        playtimeTarget: {
+                            target: state.playtimeTarget.target,
+                            fulfilled: Number(action.duration)
+                        }
                     }]
                 };
             } else {
@@ -49,7 +60,11 @@ const reducer = (state = initialState, action) => {
                                 data: [...entry.data, {
                                     time: action.date,
                                     duration: Number(action.duration)
-                                }]
+                                }],
+                                playtimeTarget: {
+                                    target: Number(entry.playtimeTarget.target),
+                                    fulfilled: entry.playtimeTarget.fulfilled + Number(action.duration)
+                                }
                             };
                         }
                     })
@@ -70,11 +85,35 @@ const reducer = (state = initialState, action) => {
                             ...entry,
                             data: entry.data.filter(entry => {
                                 return moment(entry.time).format() !== action.time;
-                            })
+                            }),
+                            playtimeTarget: {
+                                ...entry.playtimeTarget,
+                                fulfilled: entry.playtimeTarget.fulfilled - Number(action.duration)
+                            }
                         };
                     }
                 })
             };
+        case CHECK_PLAYTIME_TARGET:
+            const today = moment();
+
+            const checkIfDateExists = state.entries.findIndex(entry => {
+                return moment(entry.date).isSame(today, 'day');
+            })
+
+            if (checkIfDateExists === -1) {
+                // If there isn't already a matching date, add a new entry object
+                return {
+                    ...state,
+                    entries: [...state.entries, {
+                        date: today,
+                        data: [],
+                        playtimeTarget: state.playtimeTarget
+                    }]
+                };
+            } else {
+                return state;
+            }
         default:
             return state;
     }
