@@ -31,10 +31,10 @@ class FeedingLogScreen extends Component {
 
     render() {
         // Sort entries by month in descending order
-        const entries = this.props.entries.sort((a, b) => a.date < b.date);
+        const entries = this.props.entries.sort((a, b) => moment(b.date) - moment(a.date));
 
         // Function for sorting entries by time in descending order
-        const sorted = array => array.sort((a, b) => a.time < b.time);
+        const sorted = array => array.sort((a, b) => moment(a.time) - moment(b.time));
 
         return (
             <View style={styles.container}>
