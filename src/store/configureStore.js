@@ -5,12 +5,14 @@ import storage from 'redux-persist/lib/storage';
 
 import catReducer from './catReducer';
 import feedingReducer from './feedingReducer';
+import healthReducer from './healthReducer';
 import playtimeReducer from './playtimeReducer';
 import poopingReducer from './poopingReducer';
 
 const rootReducer = combineReducers({
     cat: catReducer,
     feeding: feedingReducer,
+    health: healthReducer,
     playtime: playtimeReducer,
     pooping: poopingReducer
 });

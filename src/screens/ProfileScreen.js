@@ -10,6 +10,7 @@ import { Navigation } from 'react-native-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
+import 'moment-recur';
 
 import { Row } from '../components/UI/grid';
 import { Header, Subheading } from '../components/UI/typography';
@@ -32,7 +33,8 @@ class ProfileScreen extends Component {
             playtimeTarget: {
                 target: 0,
                 fulfilled: 0
-            }
+            },
+            daysUntilDeworming: 0
         }
     }
 
@@ -109,14 +111,25 @@ class ProfileScreen extends Component {
     componentWillMount() {
         this.props.onCheckFeedingTarget();
         this.props.onCheckPlaytimeTarget();
+        this.getDaysUntilNextTreatment();
     }
 
     componentDidMount() {
         this.getDaysTargetValues(this.props);
     }
 
+    getDaysUntilNextTreatment = () => {
+        // Set monthly recurrence based on start date from Redux state
+        // TODO: Create logic to for getting recurrence from Redux state too
+        let recurrence = moment(this.props.healthEntries.deworming[0].startDate).recur().every(1).month();
+        let today = moment();
+        let nextDay = recurrence.next(1)[0]; // Returns array of next dates
+        // Get the difference between next date and today
+        this.setState({ daysUntilDeworming: nextDay.diff(today, 'days') });
+    }
+
     render() {
-        const { feedingTarget, playtimeTarget } = this.state;
+        const { feedingTarget, playtimeTarget, daysUntilDeworming } = this.state;
         const { age, name, weight } = this.props;
 
         return (
@@ -132,6 +145,9 @@ class ProfileScreen extends Component {
                     </Row>
                     <ProgressBar title='Food target' progress={feedingTarget} color='red' />
                     <ProgressBar title='Play target' progress={playtimeTarget} color='blue' />
+                    <Row>
+                        <Subheading>Days until next deworming treatment: {daysUntilDeworming}</Subheading>
+                    </Row>
                 </View>
                 <View style={styles.modalOpener}>
                     <Button style='FAB' onPress={this.displayModal}>
@@ -200,6 +216,7 @@ const mapStateToProps = state => {
     return {
         age: state.cat.age,
         feedingEntries: state.feeding.entries,
+        healthEntries: state.health.entries,
         name: state.cat.name,
         playtimeEntries: state.playtime.entries,
         weight: state.cat.weight

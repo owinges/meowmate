@@ -1,39 +1,35 @@
-// import { ADD_HEALTH_ENTRY } from './entryActions';
+// import { CHECK_RECURRENCE } from './healthActions';
 import moment from 'moment';
 
 const initialState = {
-    entries: [
-        {
-            date: moment([2019, 2, 23]),
-            data: [
-                {
-                    // time: moment([2019, 2, 23]),
-                    // duration: null
-                }
-            ]
-        }
-    ]
+    entries: {
+        deworming: [
+            {
+                name: 'Advocate',
+                startDate: moment(),
+                frequency: 'monthly'
+            }
+        ]
+        // medicine: [
+        //     {
+        //         name: '',
+        //         recurrence: {}
+        //     }
+        // ],
+        // vetReminder: [
+        //     {
+        //         name: '',
+        //         recurrence: {}
+        //     }
+        // ]
+    }
 }
 
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        default:
+            return state;
+    }
+}
 
-// health: {
-//     deworming: [
-//         // {
-//         //     name: '',
-//         //     frequency: 'daily' || 'weekly' || 'monthly',
-//         //     startDate: new Date()
-//         // }
-//     ],
-//         medicine: [
-//             // {
-//             //     name: '',
-//             //     frequency: 'daily' || 'weekly' || 'monthly',
-//             //     startDate: new Date()
-//             // }
-//         ],
-//             vetReminder: {
-//         //     name: '',
-//         //     frequency: 'daily' || 'weekly' || 'monthly',
-//         //     startDate: new Date()
-//     }
-// }
+export default reducer;
