@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import { connect } from 'react-redux';
 import moment from 'moment';
+
+import DateEntries from '../components/calendar/DateEntries';
 
 class CalendarScreen extends Component {
     constructor(props) {
@@ -18,7 +20,7 @@ class CalendarScreen extends Component {
     getMarkedDates = () => {
         let markedDates = {};
 
-        this.props.entries.forEach(entry => {
+        this.props.feedingEntries.forEach(entry => {
             markedDates = {
                 ...markedDates,
                 [moment(entry.date).format('YYYY-MM-DD')]: { marked: true }
@@ -30,19 +32,31 @@ class CalendarScreen extends Component {
 
     selectDate = dateString => {
 
-        const date = this.props.entries.findIndex(entry => {
+        const feedingDate = this.props.feedingEntries.findIndex(entry => {
+            return moment(entry.date).isSame(moment(dateString), 'day');
+        })
+
+        const playtimeDate = this.props.playtimeEntries.findIndex(entry => {
+            return moment(entry.date).isSame(moment(dateString), 'day');
+        })
+
+        const poopingDate = this.props.poopingEntries.findIndex(entry => {
             return moment(entry.date).isSame(moment(dateString), 'day');
         })
 
         this.setState({ selectedDate: dateString });
 
-        if (date !== -1) {
-            this.setState({ selectedDateInfo: this.props.entries[date] })
+        if (feedingDate !== -1) {
+            this.setState({
+                selectedDateInfo: {
+                    feeding: this.props.feedingEntries[feedingDate],
+                    playtime: this.props.playtimeEntries[playtimeDate],
+                    pooping: this.props.poopingEntries[poopingDate]
+                }
+            });
         } else {
             this.setState({ selectedDateInfo: {} });
         }
-
-        console.log(this.state.markedDates);
     }
 
     render() {
@@ -65,28 +79,8 @@ class CalendarScreen extends Component {
                     }}
                 />
                 <View style={styles.infoBox}>
-                    {this.state.selectedDateInfo.data ? (
-                        <View>
-                            <Text>
-                                {moment(this.state.selectedDateInfo.date).format('DD/MM/YYYY - dddd')}
-                            </Text>
-                            <FlatList
-                                keyExtractor={item => moment(item.time).format()}
-                                data={this.state.selectedDateInfo.data}
-                                renderItem={({ item }) => (
-                                    <View>
-                                        <View>
-                                            <View>
-                                                {console.log(item)}
-                                                <Text>{moment(item.time).format('hh:mm A')}</Text>
-                                                <Text>{item.foodType}</Text>
-                                                <Text>{item.quantity} g</Text>
-                                            </View>
-                                        </View>
-                                    </View>
-                                )}
-                            />
-                        </View>
+                    {this.state.selectedDateInfo.feeding ? (
+                        <DateEntries entries={this.state.selectedDateInfo} />
                     ) : (
                         <Text>Nothing to display</Text>
                     )}
@@ -105,13 +99,16 @@ const styles = StyleSheet.create({
     infoBox: {
         alignItems: 'center',
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        width: '100%'
     }
 })
 
 const mapStateToProps = state => {
     return {
-        entries: state.feeding.entries
+        feedingEntries: state.feeding.entries,
+        playtimeEntries: state.playtime.entries,
+        poopingEntries: state.pooping.entries
     }
 }
 

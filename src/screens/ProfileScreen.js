@@ -102,28 +102,6 @@ class ProfileScreen extends Component {
         });
     }
 
-    getFeedingTarget = () => {
-        const today = moment();
-
-        const indexFeeding = this.props.feedingEntries.findIndex(entry => {
-            return moment(entry.date).isSame(today, 'day');
-        })
-
-        return this.props.feedingEntries[indexFeeding].feedingTarget;
-    }
-    getPlaytimeTarget = () => {
-        const today = moment();
-
-        const indexPlaytime = this.props.playtimeEntries.findIndex(entry => {
-            return moment(entry.date).isSame(today, 'day');
-        })
-
-        let test = {};
-        test = this.props.playtimeEntries[indexPlaytime].playtimeTarget;
-
-        return test;
-    }
-
     componentWillReceiveProps(newProps) {
         this.getDaysTargetValues(newProps);
     }
