@@ -6,7 +6,7 @@ const initialState = {
         deworming: [
             {
                 name: 'Advocate',
-                startDate: moment(),
+                startDate: moment('08/08/2018'),
                 frequency: 'monthly'
             }
         ]

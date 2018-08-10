@@ -10,7 +10,7 @@ export default class DateEntries extends Component {
     render() {
         return (
             <React.Fragment>
-                <View style={styles.container}>
+                <View style={styles.tabs}>
                     <TouchableOpacity style={styles.tab} onPress={() => this.setState({ selectedTab: 'feeding' })}>
                         <Text style={styles.tabText}>Feeding</Text>
                     </TouchableOpacity>
@@ -24,61 +24,61 @@ export default class DateEntries extends Component {
                 <Text>
                     {moment(this.props.entries.feeding.date).format('DD/MM/YYYY - dddd')}
                 </Text>
-                {this.props.entries.feeding ? (
-                    <FlatList
-                        style={[styles.list, { display: this.state.selectedTab === 'feeding' ? 'flex' : 'none' }]}
-                        keyExtractor={item => moment(item.time).format()}
-                        data={this.props.entries.feeding.data}
-                        renderItem={({ item }) => (
-                            <View>
-                                <Text>{moment(item.time).format('hh:mm A')}</Text>
-                                <Text>{item.foodType}</Text>
-                                <Text>{item.quantity} g</Text>
-                            </View>
-                        )}
-                    />
-                ) : (
-                    <Text style={{ display: this.state.selectedTab === 'feeding' ? 'flex' : 'none' }}>There are no feeding entries.</Text>
-                )}
-                {this.props.entries.playtime ? (
-                    <FlatList
-                        style={[styles.list, { display: this.state.selectedTab === 'playtime' ? 'flex' : 'none' }]}
-                        keyExtractor={item => moment(item.time).format()}
-                        data={this.props.entries.playtime.data}
-                        renderItem={({ item }) => (
-                            <View>
-                                <Text>{moment(item.time).format('hh:mm A')}</Text>
-                                <Text>{item.duration} minutes</Text>
-                            </View>
-                        )}
-                    />
-                ) : (
-                    <Text style={{ display: this.state.selectedTab === 'playtime' ? 'flex' : 'none' }}>There are no playtime entries.</Text>
-                )}
-                {this.props.entries.pooping ? (
-                    <FlatList
-                        style={[styles.list, { display: this.state.selectedTab === 'pooping' ? 'flex' : 'none' }]}
-                        keyExtractor={item => moment(item.time).format()}
-                        data={this.props.entries.feeding.data}
-                        renderItem={({ item }) => (
-                            <View>
-                                <Text>{moment(item.time).format('hh:mm A')}</Text>
-                                <Text>{item.consistency}</Text>
-                            </View>
-                        )}
-                    />
-                ) : (
-                    <View style={styles.emptyListContainer}>
+                <View style={styles.listContainer}>
+                    {this.props.entries.feeding ? (
+                        <FlatList
+                            style={[styles.list, { display: this.state.selectedTab === 'feeding' ? 'flex' : 'none' }]}
+                            keyExtractor={item => moment(item.time).format()}
+                            data={this.props.entries.feeding.data}
+                            renderItem={({ item }) => (
+                                <View style={styles.listItem}>
+                                    <Text>{moment(item.time).format('hh:mm A')}</Text>
+                                    <Text>{item.foodType}</Text>
+                                    <Text>{item.quantity} g</Text>
+                                </View>
+                            )}
+                        />
+                    ) : (
+                        <Text style={{ display: this.state.selectedTab === 'feeding' ? 'flex' : 'none' }}>There are no feeding entries.</Text>
+                    )}
+                    {this.props.entries.playtime ? (
+                        <FlatList
+                            style={[styles.list, { display: this.state.selectedTab === 'playtime' ? 'flex' : 'none' }]}
+                            keyExtractor={item => moment(item.time).format()}
+                            data={this.props.entries.playtime.data}
+                            renderItem={({ item }) => (
+                                <View style={styles.listItem}>
+                                    <Text>{moment(item.time).format('hh:mm A')}</Text>
+                                    <Text>{item.duration} minutes</Text>
+                                </View>
+                            )}
+                        />
+                    ) : (
+                        <Text style={{ display: this.state.selectedTab === 'playtime' ? 'flex' : 'none' }}>There are no playtime entries.</Text>
+                    )}
+                    {this.props.entries.pooping ? (
+                        <FlatList
+                            style={[styles.list, { display: this.state.selectedTab === 'pooping' ? 'flex' : 'none' }]}
+                            keyExtractor={item => moment(item.time).format()}
+                            data={this.props.entries.feeding.data}
+                            renderItem={({ item }) => (
+                                <View style={styles.listItem}>
+                                    <Text>{moment(item.time).format('hh:mm A')}</Text>
+                                    <Text>{item.consistency}</Text>
+                                </View>
+                            )}
+                        />
+                    ) : (
                         <Text style={{ display: this.state.selectedTab === 'pooping' ? 'flex' : 'none' }}>There are no pooping entries.</Text>
-                    </View>
-                )}
+                    )}
+                </View>
             </React.Fragment>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    tabs: {
         height: 20,
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -86,9 +86,18 @@ const styles = StyleSheet.create({
         marginTop: 20,
         width: '100%'
     },
+    listContainer: {
+        alignItems: 'center',
+        flex: 1,
+        justifyContent: 'center',
+        width: 200
+    },
     list: {
-        backgroundColor: 'red',
-        width: '100%'
+        // backgroundColor: 'red'
+    },
+    listItem: {
+        marginBottom: 10,
+        marginTop: 10
     },
     tab: {
         borderColor: '#bbb',
@@ -98,9 +107,5 @@ const styles = StyleSheet.create({
     },
     tabText: {
         textAlign: 'center'
-    },
-    emptyListContainer: {
-        flex: 1,
-        justifyContent: 'center'
     }
 })

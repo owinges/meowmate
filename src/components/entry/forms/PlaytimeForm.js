@@ -5,11 +5,13 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 
 import Button from '../../Button';
+import StopWatch from '../StopWatch';
 import { Header } from '../../UI/typography';
 import { addPlaytime } from '../../../store/entryActions';
 
 class PlaytimeForm extends Component {
     state = {
+        timingMethod: 'stopwatch',
         duration: 0,
         isDateTimePickerVisible: false,
         date: new Date()
@@ -23,6 +25,20 @@ class PlaytimeForm extends Component {
         this.setState({ date });
         this.toggleDateTimePicker();
     };
+
+    getStopwatchData = duration => {
+        let seconds = duration;
+        let minutes = parseInt(seconds / 60);
+        seconds = seconds % 60;
+        
+        if(seconds >= 30) {
+            minutes += 1;
+        }
+
+        this.setState({
+            duration: minutes
+        });
+    }
 
     newEntry = () => {
         if (this.state.duration === null) {
@@ -39,6 +55,8 @@ class PlaytimeForm extends Component {
     }
 
     render() {
+        const { timingMethod } = this.state;
+
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.toggleDateTimePicker}>
@@ -52,14 +70,18 @@ class PlaytimeForm extends Component {
                     onCancel={this.toggleDateTimePicker}
                 />
                 <Header style={styles.type}>How long did you play?</Header>
-                <TextInput
-                    style={styles.input}
-                    value={this.state.quantity}
-                    placeholder='Enter number of minutes'
-                    keyboardType='number-pad'
-                    maxLength={3}
-                    onChangeText={(value) => this.setState({ duration: value })}
-                />
+                {timingMethod === 'stopwatch' ? (
+                    <StopWatch setDuration={this.getStopwatchData} />
+                ) : (
+                    <TextInput
+                        style={styles.input}
+                        value={this.state.quantity}
+                        placeholder='Enter number of minutes'
+                        keyboardType='number-pad'
+                        maxLength={3}
+                        onChangeText={(value) => this.setState({ duration: value })}
+                    />
+                )}
                 <Button type='Default' onPress={this.newEntry}>Submit</Button>
             </View>
         );

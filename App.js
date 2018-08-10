@@ -30,4 +30,4 @@ persistStore(store, null, () => {
   displayProfileScreen();
 })
 
-  // .purge().then(event => console.log(event));
+// .purge().then(event => console.log(event));

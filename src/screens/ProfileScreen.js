@@ -120,7 +120,6 @@ class ProfileScreen extends Component {
 
     getDaysUntilNextTreatment = () => {
         // Set monthly recurrence based on start date from Redux state
-        // TODO: Create logic to for getting recurrence from Redux state too
         let recurrence = moment(this.props.healthEntries.deworming[0].startDate).recur().every(1).month();
         let today = moment();
         let nextDay = recurrence.next(1)[0]; // Returns array of next dates
