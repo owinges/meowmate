@@ -34,6 +34,7 @@ class PlaytimeForm extends Component {
         if(seconds >= 30) {
             minutes += 1;
         }
+        console.log(minutes);
 
         this.setState({
             duration: minutes

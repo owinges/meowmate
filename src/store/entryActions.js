@@ -54,10 +54,11 @@ export const deleteFeeding = (time, quantity) => {
     }
 }
 
-export const deletePlaytime = time => {
+export const deletePlaytime = (time, duration) => {
     return {
         type: DELETE_PLAYTIME,
-        time
+        time,
+        duration
     }
 }
 

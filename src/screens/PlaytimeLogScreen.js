@@ -63,7 +63,7 @@ class PlaytimeLogScreen extends Component {
                                             </View>
                                             <TouchableOpacity
                                                 style={{ alignSelf: 'center' }}
-                                                onPress={() => this.props.onDeletePlaytime(moment(item.time).format())}
+                                                onPress={() => this.props.onDeletePlaytime(moment(item.time).format(), item.duration)}
                                             >
                                                 <Icon name='ios-trash' color='red' size={30} />
                                             </TouchableOpacity>
@@ -127,7 +127,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onDeletePlaytime: (playtime) => dispatch(deletePlaytime(playtime))
+        onDeletePlaytime: (time, duration) => dispatch(deletePlaytime(time, duration))
     }
 }
 

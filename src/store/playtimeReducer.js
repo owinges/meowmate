@@ -62,7 +62,7 @@ const reducer = (state = initialState, action) => {
                                     duration: Number(action.duration)
                                 }],
                                 playtimeTarget: {
-                                    target: Number(entry.playtimeTarget.target),
+                                    target: entry.playtimeTarget.target,
                                     fulfilled: entry.playtimeTarget.fulfilled + Number(action.duration)
                                 }
                             };
@@ -81,6 +81,8 @@ const reducer = (state = initialState, action) => {
                     if (index !== date) {
                         return entry;
                     } else {
+                        console.log(entry.playtimeTarget.fulfilled);
+                        console.log(action.duration);
                         return {
                             ...entry,
                             data: entry.data.filter(entry => {
