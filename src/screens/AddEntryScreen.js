@@ -4,8 +4,13 @@ import { Navigation } from 'react-native-navigation';
 
 import EntryList from '../components/entry/EntryList';
 import Button from '../components/Button';
+import theme from '../styles/theme';
 
 export default class AddEntryScreen extends Component {
+    static navigatorStyle = {
+        navBarBackgroundColor: theme.tertiary
+    };
+
     closeModal = () => {
         Navigation.dismissModal({
             animationType: 'slide-down'
@@ -38,7 +43,7 @@ export default class AddEntryScreen extends Component {
 const styles = StyleSheet.create({
     modal: {
         alignItems: 'center',
-        backgroundColor: 'papayawhip',
+        backgroundColor: theme.primary,
         flex: 1,
         justifyContent: 'flex-start',
         paddingTop: 30

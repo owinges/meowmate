@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import { connect } from 'react-redux';
 import moment from 'moment';
@@ -8,6 +8,7 @@ import Button from '../../Button';
 import StopWatch from '../StopWatch';
 import { Header } from '../../UI/typography';
 import { addPlaytime } from '../../../store/entryActions';
+import cat from '../../../assets/cat.png';
 
 class PlaytimeForm extends Component {
     state = {
@@ -63,6 +64,7 @@ class PlaytimeForm extends Component {
                 <TouchableOpacity onPress={this.toggleDateTimePicker}>
                     <Text>{this.state.date.toDateString()}</Text>
                 </TouchableOpacity>
+                <Image source={cat} />
                 <DateTimePicker
                     mode='datetime'
                     maximumDate={new Date()}

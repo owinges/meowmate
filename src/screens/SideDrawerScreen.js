@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import {
     Dimensions,
     Platform,
-    StyleSheet,
     Text,
     TouchableOpacity,
     View
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+import styles from '../styles/sideDrawerStyles';
 
 export default class SideDrawerScreen extends Component {
 
@@ -44,7 +45,7 @@ export default class SideDrawerScreen extends Component {
                         <Icon
                             name={Platform.OS === 'android' ? 'md-contact' : 'ios-contact'}
                             size={30}
-                            color='#aaa'
+                            color='black'
                             style={styles.drawerItemIcon}
                         />
                         <Text>Cat Info</Text>
@@ -55,7 +56,7 @@ export default class SideDrawerScreen extends Component {
                         <Icon
                             name={Platform.OS === 'android' ? 'md-calendar' : 'ios-calendar'}
                             size={30}
-                            color='#aaa'
+                            color='black'
                             style={styles.drawerItemIcon}
                         />
                         <Text>Calendar</Text>
@@ -66,7 +67,7 @@ export default class SideDrawerScreen extends Component {
                         <Icon
                             name={Platform.OS === 'android' ? 'md-list' : 'ios-list'}
                             size={30}
-                            color='#aaa'
+                            color='black'
                             style={styles.drawerItemIcon}
                         />
                         <Text>Entry Log</Text>
@@ -76,21 +77,3 @@ export default class SideDrawerScreen extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'white',
-        flex: 1,
-        paddingTop: 50
-    },
-    drawerItem: {
-        alignItems: 'center',
-        backgroundColor: '#eee',
-        flexDirection: 'row',
-        marginBottom: 6,
-        padding: 10
-    },
-    drawerItemIcon: {
-        marginRight: 10
-    }
-})

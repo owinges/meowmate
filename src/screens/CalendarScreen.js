@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 
 import DateEntries from '../components/calendar/DateEntries';
+import theme from '../styles/theme';
 
 class CalendarScreen extends Component {
     constructor(props) {
@@ -63,7 +64,9 @@ class CalendarScreen extends Component {
         return (
             <View style={styles.container}>
                 <Calendar
-                    style={styles.calendar}
+                    theme={{
+                        calendarBackground: theme.primary
+                    }}
                     onDayPress={day => this.selectDate(day.dateString)}
                     // Month format in calendar title. Formatting values: http://arshaw.com/xdate/#Formatting
                     monthFormat={'MMMM yyyy'}
@@ -92,9 +95,8 @@ class CalendarScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: theme.primary,
         flex: 1
-    },
-    calendar: {
     },
     infoBox: {
         alignItems: 'center',

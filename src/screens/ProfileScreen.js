@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import {
-    Image,
-    Platform,
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
+import { Image, Platform, Text, View } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import 'moment-recur';
 
-import { Row } from '../components/UI/grid';
+import { Row, Column } from '../components/UI/grid';
 import { Header, Subheading } from '../components/UI/typography';
 import Button from '../components/Button';
 import ProgressBar from '../components/ProgressBar';
+import styles from '../styles/profileScreenStyles';
+import theme from '../styles/theme';
 
 import { checkFeedingTarget, checkPlaytimeTarget } from '../store/entryActions';
 import logTabs from './logTabs';
 
 class ProfileScreen extends Component {
+    static navigatorStyle = {
+        navBarBackgroundColor: theme.tertiary
+    };
+
     constructor(props) {
         super(props);
         this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
@@ -114,10 +114,6 @@ class ProfileScreen extends Component {
         this.getDaysUntilNextTreatment();
     }
 
-    componentDidMount() {
-        this.getDaysTargetValues(this.props);
-    }
-
     getDaysUntilNextTreatment = () => {
         // Set monthly recurrence based on start date from Redux state
         let recurrence = moment(this.props.healthEntries.deworming[0].startDate).recur().every(1).month();
@@ -136,80 +132,43 @@ class ProfileScreen extends Component {
                 <View style={styles.imageContainer}>
                     <Image style={styles.image} source={{ uri: 'https://sopurrfect.com/wp-content/uploads/2016/06/SoPurrfect-What-You-Need-To-Know-About-Owning-A-Ragdoll-Cat-.jpg' }} />
                 </View>
-                <View style={styles.headingContainer}>
-                    <Header style={styles.header}>{name}</Header>
+                <View style={styles.nameContainer}>
+                    <Header style={styles.header}>{name} Poo</Header>
+                </View>
+                <View style={styles.infoBox}>
                     <Row>
-                        <Subheading style={styles.subheading}>{age}</Subheading>
-                        <Subheading style={styles.subheading}>{weight}</Subheading>
+                        <Column style={styles.age}>
+                            <Header>8</Header>
+                            <Subheading style={styles.subheading}>MONTHS</Subheading>
+                        </Column>
+                        <Column style={styles.weight}>
+                            <Header>4.5</Header>
+                            <Subheading style={styles.subheading}>KILOS</Subheading>
+                        </Column>
                     </Row>
-                    <ProgressBar title='Food target' progress={feedingTarget} color='red' />
-                    <ProgressBar title='Play target' progress={playtimeTarget} color='blue' />
-                    <Row>
-                        <Subheading>Days until next deworming treatment: {daysUntilDeworming}</Subheading>
-                    </Row>
+                    <View style={styles.progressBarContainer}>
+                        <Header style={styles.progressBarHeader}>Daily Targets</Header>
+                        <ProgressBar title='Food' progress={feedingTarget} color='red' />
+                        <ProgressBar title='Play' progress={playtimeTarget} color='blue' />
+                    </View>
                 </View>
                 <View style={styles.modalOpener}>
                     <Button style='FAB' onPress={this.displayModal}>
                         <Icon
-                            name={Platform.OS === 'android' ? 'md-add' : 'ios-add'}
-                            size={60}
+                            name={Platform.OS === 'android' ? 'md-paw' : 'ios-paw'}
+                            size={50}
                         />
                     </Button>
                 </View>
-                <View style={styles.entryLogOpener}>
+                {/* <View style={styles.entryLogOpener}>
                     <Button style='default' onPress={this.displayEntryLog}>
                         <Text>Entry Log</Text>
                     </Button>
-                </View>
+                </View> */}
             </View>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        backgroundColor: 'papayawhip',
-        flex: 1,
-        justifyContent: 'center'
-    },
-    imageContainer: {
-        borderColor: '#eee',
-        borderRadius: 125,
-        borderWidth: 4,
-        height: 250,
-        marginBottom: 30,
-        marginTop: 20,
-        overflow: 'hidden',
-        width: 250
-    },
-    image: {
-        height: '100%',
-        width: '100%'
-    },
-    headingContainer: {
-        alignItems: 'center',
-        backgroundColor: 'moccasin',
-        flex: 1,
-        width: '100%'
-    },
-    header: {
-        marginTop: 8
-    },
-    subheading: {
-        marginTop: 8
-    },
-    modalOpener: {
-        bottom: 20,
-        left: 20,
-        position: 'absolute',
-    },
-    entryLogOpener: {
-        bottom: 25,
-        right: 20,
-        position: 'absolute',
-    }
-});
 
 const mapStateToProps = state => {
     return {

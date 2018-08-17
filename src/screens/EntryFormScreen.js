@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import theme from '../styles/theme';
+
 import FeedingForm from '../components/entry/forms/FeedingForm';
 import PoopingForm from '../components/entry/forms/PoopingForm';
 import PlaytimeForm from '../components/entry/forms/PlaytimeForm';
@@ -54,7 +56,7 @@ export default class EntryFormScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        backgroundColor: 'papayawhip',
+        backgroundColor: theme.primary,
         flex: 1,
         paddingTop: 12
     }

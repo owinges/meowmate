@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
 import displayProfileScreen from './displayProfileScreen';
 import { deleteFeeding } from '../store/entryActions';
+import styles from '../styles/entryLogScreenStyles';
+import theme from '../styles/theme';
 
 class FeedingLogScreen extends Component {
+    static navigatorStyle = {
+        navBarBackgroundColor: theme.tertiary
+    };
+
     static navigatorButtons = {
         leftButtons: [
             {
@@ -78,45 +84,6 @@ class FeedingLogScreen extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        backgroundColor: 'papayawhip',
-        flex: 1,
-        paddingTop: 12,
-        width: '100%'
-    },
-    list: {
-        width: '80%'
-    },
-    entry: {
-        marginTop: 12,
-        width: '100%'
-    },
-    item: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    itemText: {
-        fontSize: 16
-    },
-    date: {
-        borderBottomWidth: 2,
-        borderBottomColor: 'black',
-        marginBottom: 8
-    },
-    dateText: {
-        fontSize: 24
-    },
-    nestedItem: {
-        marginTop: 4,
-        marginBottom: 4
-    },
-    totalText: {
-        textAlign: 'right'
-    }
-})
 
 const mapStateToProps = state => {
     return {
